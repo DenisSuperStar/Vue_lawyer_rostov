@@ -1,7 +1,7 @@
 <template>
     <fragment>
         <div :class="[$style.pricesContainer]">
-            <div :class="[$style.pricesTitle]">02__Прайс лист</div>
+            <h3 :class="[$style.pricesTitle]">02__Прайс лист</h3>
             <VueSlickCarousel :arrows="false" :dots="false" :touchMove="true" :slidesToShow="3" :slidesToScroll="3"
                 :speed="500">
                 <div :class="[$style.priceItem]" v-for="price in priceList" :key="price.id">
