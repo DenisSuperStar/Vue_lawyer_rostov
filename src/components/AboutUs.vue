@@ -21,7 +21,7 @@
                 <div :class="[$style.cardColumnSlide]">
                     <div :class="[$style.cardColumn, $style.cardColumnFirst]">
                         <div :class="[$style.cardHeaderColumn]">
-                            <img src="../../public/assets/grid_1.svg" :class="[$style.cardAttacment]" alt="Развод">
+                            <img src="../../public/assets/grid_1.svg" :class="[$style.cardAttacment]" alt="Развод" />
                         </div>
                         
                             <div :class="[$style.cardBodyTitle]">Споры при разводе</div>
@@ -32,7 +32,7 @@
                 <div :class="[$style.cardColumnSlide]">
                     <div :class="[$style.cardColumn]">
                         <div :class="[$style.cardHeaderColumn]">
-                            <img src="../../public/assets/grid_2.svg" :class="[$style.cardAttacment]" alt="Алименты">
+                            <img src="../../public/assets/grid_2.svg" :class="[$style.cardAttacment]" alt="Алименты" />
                         </div>
                         
                             <div :class="[$style.cardBodyTitle]">Алиментные споры</div>
@@ -43,7 +43,7 @@
                 <div :class="[$style.cardColumnSlide]">
                     <div :class="[$style.cardColumn]">
                         <div :class="[$style.cardHeaderColumn]">
-                            <img src="../../public/assets/grid_3.svg" :class="[$style.cardAttacment]" alt="Имущество">
+                            <img src="../../public/assets/grid_3.svg" :class="[$style.cardAttacment]" alt="Имущество" />
                         </div>
                         
                             <div :class="[$style.cardBodyTitle]">Раздел имущества</div>
@@ -54,7 +54,7 @@
                 <div :class="[$style.cardColumnSlide]">
                     <div :class="[$style.cardColumn]">
                         <div :class="[$style.cardHeaderColumn]">
-                            <img src="../../public/assets/grid_4.svg" :class="[$style.cardAttacment]" alt="Усыновление">
+                            <img src="../../public/assets/grid_4.svg" :class="[$style.cardAttacment]" alt="Усыновление" />
                         </div>
                         
                             <div :class="[$style.cardBodyTitle]">Вопросы усыновления</div>
