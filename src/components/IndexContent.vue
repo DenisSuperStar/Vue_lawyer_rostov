@@ -6,6 +6,7 @@
     </div>
     <about-us></about-us>
     <price-list></price-list>
+    <contact-us></contact-us>
     <contact-section></contact-section>
     <footer-bar></footer-bar>
   </div>
@@ -18,6 +19,7 @@ import ContactSection from './ContactSection.vue';
 import AboutUs from "./AboutUs.vue";
 import PriceList from "./PriceList.vue";
 import FooterBar from "./FooterBar.vue";
+import ContactUs from "./ContactUs.vue";
 
 export default {
   name: 'IndexContent',
@@ -27,6 +29,7 @@ export default {
     'contact-section': ContactSection,
     'about-us': AboutUs,
     'price-list': PriceList,
+    'contact-us': ContactUs,
     "footer-bar": FooterBar,
   },
   props: {
