@@ -63,6 +63,7 @@
                     </div>
                 </div>
             </VueSlickCarousel>
+            
         </div>
     </section>
 </template>
@@ -100,11 +101,11 @@ export default {
 }
 
 .column1 {
-    width: 60%;
+    max-width: 60%;
 }
 
 .column2 {
-    width: 40%;
+    max-width: 40%;
 }
 
 .columnContent {
