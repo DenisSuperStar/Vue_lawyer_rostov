@@ -8,19 +8,19 @@
             </div>
         </div>
         <div :class="[$style.layoutForm]">
-            <div :class="[$style.formColumn]">
+            <form :class="[$style.formColumn]">
                 <h3 :class="[$style.formHeadline]">03__оставить заявку</h3>
                 <div :class="[$style.formRow, $style.contactForm]">
                     <div :class="[$style.formControlWrap]">
-                        <input @input="isField()" name="your_name" type="text" :class="[$style.formControl]"
-                            placeholder="Ваше имя *" v-model="name" />
-                        <span id="error" v-if="!isField()">Your field is not empty</span>
+                        <input name="your_name" type="text" :class="[$style.formControl]" v-model="name"
+                            placeholder="Ваше имя*" autocomplete="off" />
+                        <span id="error" v-if="!name.length">Your field is empty</span>
                     </div>
                     <div :class="[$style.formControlWrap]">
                         <ValidationProvider :rules="{regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/}"
                             v-slot="{errors}">
                             <input @input="isEmail(errors)" name="Your email" :class="[$style.formControl]" type="email"
-                                placeholder="Ваш email*" v-model="email" />
+                                v-model="email" placeholder="Ваш email*" autocomplete="off" />
                             <span id="error">{{errors[0]}}</span>
                         </ValidationProvider>
                     </div>
@@ -30,17 +30,20 @@
                         :rules="{regex:/((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}/}"
                         v-slot="{ errors }">
                         <input @input="isPhone(errors)" name="Your phone" :class="[$style.formControl]" type="text"
-                            placeholder="Ваш номер телефона" v-model="phone" />
+                            v-model="phone" placeholder="Ваш номер телефона" autocomplete="off" />
                         <span id="error">{{ errors[0] }}</span>
                     </ValidationProvider>
                 </div>
-                <input @input="isMessage()" name="your_message" type="text"
-                    :class="[$style.formControl, $style.resizeControl]" placeholder="Текст сообщения*" v-model="message" />
-                <span id="error" v-if="!isMessage()">Your message is not empty</span>
+                <input name="your_message" type="text" :class="[$style.formControl, $style.resizeControl]"
+                    v-model="message" placeholder="Ваше сообщение*" autocomplete="off" />
+                <span id="error" v-if="!message.length">Your message is empty</span>
                 <div :class="[$style.formButton]">
-                    <input type="submit" :class="[$style.formControlSubmit]" value="Отправить" />
+                    <input type="submit" v-if="name && isEmailActive && isPhoneActive && message"
+                        :class="[$style.formControlSubmit]" value="Отправить" />
+                    <input type="submit" v-else :class="[$style.formControlSubmit, $style.disabledSubmit]"
+                        value="Отправить" disabled />
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 </template>
@@ -60,27 +63,25 @@ export default {
             name: "",
             email: "",
             phone: "",
-            message: ""
+            message: "",
+            isEmailActive: null,
+            isPhoneActive: null
         }
     },
     methods: {
-        isField() {
-            return this.name ? this.name.length : "";
+        isEmail(err) {
+            this.isEmailActive = err[0] ? 0 : 1;
         },
-        isEmail(errors) {
-            return errors[0].length ? true : false
+        isPhone(err) {
+            this.isPhoneActive = err[0] ? 0 : 1;
         },
-        isPhone(errors) {
-            return errors[0].length ? true : false
-        },
-        isMessage() {
-            return this.message ? this.message.length : "";
-        }
     }
 }
 </script>
 
 <style module>
+
+
 
 
 .layout {
@@ -174,9 +175,11 @@ flex: 4;
 .resizeControl {
     height: 85px;
 }
+
 .formControl::placeholder {
     color: #B2B2B9;
 }
+
 .formControl:active,
 .formControl:hover,
 .formControl:focus {
@@ -201,5 +204,9 @@ flex: 4;
     padding: 13px 26px;
     font-size: 14px;
     line-height: 1.25;
+}
+
+.disabledSubmit {
+    background-color: rgba(102, 48, 255, .1);
 }
 </style>
