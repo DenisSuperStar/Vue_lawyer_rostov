@@ -1,11 +1,11 @@
 <template>
   <section :class="[$style.mainContent]">
-    <VueSlickCarousel :arrows="false" :dots="true" :speed="500">
-      <div v-for="i in list" :class="[$style.slide]" :key="i.id">
+    <VueSlickCarousel v-bind="settings">
+      <div v-for="(i, index) in list" :class="[$style.slide]" :key="index">
         <div :class="[$style.slideContent]">
           <h3 :class="[$style.slideTitle]">{{ i.title }}</h3>
           <div :class="[$style.slideText]">
-            {{ i.text }}
+            {{ i.body }}
           </div>
         </div>
       </div>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
@@ -25,25 +26,22 @@ export default {
   },
   data: function () {
     return {
-      list: [
-        {
-          id: 1,
-          title: "Мы можем мыслить глобально",
-          text: "Мы решаем ваши проблемы, используя особый тип мышления",
-        },
-        {
-          id: 2,
-          title: "Баланс качества и роста",
-          text: "В нашей компании используется самые современные инновационные подходы для решения сложных бизнес задач",
-        },
-        {
-          id: 3,
-          title: "Лучшие эксперты в своей области",
-          text: "Мы сотрудничаем с клиентами, коллегами и заинтересованными лицами",
-        },
-      ],
+      settings: {
+        arrows: false,
+        dots: true,
+        speed: 500
+      },
+      list: Array(25).fill({
+        title: "",
+        body: ""
+      })
     };
   },
+  created() {
+    axios.get('https://jsonplaceholder.typicode.com/posts?_limit=26').then(res => {
+      this.list = res.data;
+    });
+  }
 };
 </script>
 
@@ -71,16 +69,15 @@ export default {
   color: #fff;
   font-size: 54px;
   line-height: 46px;
-  z-index: 10;
   margin-bottom: 10px;
-  max-width: 50%;
+  z-index: 10;
 }
 
 .slideText {
   color: #fff;
   font-size: 24px;
   line-height: 28px;
-  max-width: 40%;
+  max-width: 50%;
 }
 </style>
 
@@ -92,10 +89,8 @@ export default {
 .slick-dots {
   position: relative;
   bottom: 300px;
-  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-  text-align: left;
   padding: 0 30px;
 }
 </style>
