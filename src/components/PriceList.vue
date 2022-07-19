@@ -98,7 +98,7 @@ export default {
 .pricesContainer {
     max-width: 1240px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 58.5px;
 }
 
 .pricesTitle {

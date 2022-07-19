@@ -155,6 +155,7 @@ export default {
 
 .cardsection {
     padding: 13px 13px 32.5px 13px;
+    cursor: pointer;
 }
 
 .cardsectionFirst {

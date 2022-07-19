@@ -46,6 +46,6 @@ export default {
 .indexBackground {
   background-image: url('../../public/assets/Rostov.svg');
   background-size: cover;
-  margin-bottom: 130px;
+  margin-bottom: 58.5px;
 }
 </style>
