@@ -1,81 +1,80 @@
 <template>
-    <section :class="[$style.columns]">
-        <div :class="[$style.column1]">
-            <div :class="[$style.columnContent]">
-                <h3 :class="[$style.columnHeadline]">01__О нас</h3>
-                <div :class="[$style.columnSubline]">
-                    <span :class="[$style.sublineInner]">Наша компания предоставляет консультации по полному спектру
-                        юридических услуг</span>
-                </div>
-                <ul :class="[$style.contentInner]">
-                    <li :class="[$style.contentTextBox]" v-for="item in items" :key="item.id">
-                        <div :class="[$style.contentTitle]">{{ item.title }}</div>
-                        <div :class="[$style.contentText]">{{ item.text }}</div>
-                    </li>
-                </ul>
+    <fragment>
+        <div :class="[$style.sectionContent]">
+            <h3 :class="[$style.sectionHeadline]">01__О нас</h3>
+            <div :class="[$style.sectionSubline]">
+                <span :class="[$style.sublineInner]">Наша компания предоставляет консультации по полному спектру
+                    юридических услуг</span>
             </div>
+            <ul :class="[$style.contentInner]">
+                <li :class="[$style.contentTextBox]" v-for="item in items" :key="item.id">
+                    <div :class="[$style.contentTitle]">{{ item.title }}</div>
+                    <div :class="[$style.contentText]">{{ item.text }}</div>
+                </li>
+            </ul>
         </div>
-        <div :class="[$style.column2]">
-            <VueSlickCarousel :arrows="false" :dots="false" :touchMove="true" :slidesToShow="2" :slidesToScroll="2"
-                :speed="500">
-                <div :class="[$style.cardColumnSlide]">
-                    <div :class="[$style.cardColumn, $style.cardColumnFirst]">
-                        <div :class="[$style.cardHeaderColumn]">
-                            <img src="../../public/assets/grid_1.svg" :class="[$style.cardAttacment]" alt="Развод" />
-                        </div>
-                        
-                            <div :class="[$style.cardBodyTitle]">Споры при разводе</div>
-                            <div :class="[$style.cardBodySubtitle]">Помощь в решении конфликтов при разводе родителей</div>
-                        
+        <VueSlickCarousel :arrows="false" :dots="false" :touchMove="true" :slidesToShow="2" :slidesToScroll="2"
+            :speed="500">
+            <div :class="[$style.cardsectionSlide]">
+                <div :class="[$style.cardsection, $style.cardsectionFirst]">
+                    <div :class="[$style.cardHeadersection]">
+                        <img src="../../public/assets/grid_1.svg" :class="[$style.cardAttacment]" alt="Развод" />
                     </div>
+
+                    <div :class="[$style.cardBodyTitle]">Споры при разводе</div>
+                    <div :class="[$style.cardBodySubtitle]">Помощь в решении конфликтов при разводе родителей</div>
+
                 </div>
-                <div :class="[$style.cardColumnSlide]">
-                    <div :class="[$style.cardColumn]">
-                        <div :class="[$style.cardHeaderColumn]">
-                            <img src="../../public/assets/grid_2.svg" :class="[$style.cardAttacment]" alt="Алименты" />
-                        </div>
-                        
-                            <div :class="[$style.cardBodyTitle]">Алиментные споры</div>
-                            <div :class="[$style.cardBodySubtitle]">Урегулирование споров по взысканию алиментов</div>
-                        
+            </div>
+            <div :class="[$style.cardsectionSlide]">
+                <div :class="[$style.cardsection]">
+                    <div :class="[$style.cardHeadersection]">
+                        <img src="../../public/assets/grid_2.svg" :class="[$style.cardAttacment]" alt="Алименты" />
                     </div>
+
+                    <div :class="[$style.cardBodyTitle]">Алиментные споры</div>
+                    <div :class="[$style.cardBodySubtitle]">Урегулирование споров по взысканию алиментов</div>
+
                 </div>
-                <div :class="[$style.cardColumnSlide]">
-                    <div :class="[$style.cardColumn]">
-                        <div :class="[$style.cardHeaderColumn]">
-                            <img src="../../public/assets/grid_3.svg" :class="[$style.cardAttacment]" alt="Имущество" />
-                        </div>
-                        
-                            <div :class="[$style.cardBodyTitle]">Раздел имущества</div>
-                            <div :class="[$style.cardBodySubtitle]">Защита имущественных интересов клиента при разводе</div>
-                        
+            </div>
+            <div :class="[$style.cardsectionSlide]">
+                <div :class="[$style.cardsection]">
+                    <div :class="[$style.cardHeadersection]">
+                        <img src="../../public/assets/grid_3.svg" :class="[$style.cardAttacment]" alt="Имущество" />
                     </div>
+
+                    <div :class="[$style.cardBodyTitle]">Раздел имущества</div>
+                    <div :class="[$style.cardBodySubtitle]">Защита имущественных интересов клиента при разводе</div>
+
                 </div>
-                <div :class="[$style.cardColumnSlide]">
-                    <div :class="[$style.cardColumn]">
-                        <div :class="[$style.cardHeaderColumn]">
-                            <img src="../../public/assets/grid_4.svg" :class="[$style.cardAttacment]" alt="Усыновление" />
-                        </div>
-                        
-                            <div :class="[$style.cardBodyTitle]">Вопросы усыновления</div>
-                            <div :class="[$style.cardBodySubtitle]">Консультации при усыновлении детей</div>
-                        
+            </div>
+            <div :class="[$style.cardsectionSlide]">
+                <div :class="[$style.cardsection]">
+                    <div :class="[$style.cardHeadersection]">
+                        <img src="../../public/assets/grid_4.svg" :class="[$style.cardAttacment]" alt="Усыновление" />
                     </div>
+
+                    <div :class="[$style.cardBodyTitle]">Вопросы усыновления</div>
+                    <div :class="[$style.cardBodySubtitle]">Консультации при усыновлении детей</div>
+
                 </div>
-            </VueSlickCarousel>
-            
-        </div>
-    </section>
+            </div>
+        </VueSlickCarousel>
+    </fragment>
 </template>
 
 <script>
+import { Fragment } from 'vue-fragment';
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
     name: "AboutUs",
-    components: { VueSlickCarousel },
+    components: {
+        Fragment,
+        VueSlickCarousel,
+    },
     data: function () {
         return {
             items: [
@@ -96,32 +95,20 @@ export default {
 </script>
 
 <style module>
-.columns {
-    display: flex;
-}
-
-.column1 {
-    max-width: 60%;
-}
-
-.column2 {
-    max-width: 40%;
-}
-
-.columnContent {
+.sectionContent {
     background-color: #6630ff;
     text-align: right;
     padding: 20px 60px 40px 60px;
 }
 
-.columnHeadline {
+.sectionHeadline {
     font-size: 16px;
     text-transform: uppercase;
     color: #fff;
     padding-bottom: 6.5px;
 }
 
-.columnSubline {
+.sectionSubline {
     font-size: 27px;
     line-height: 1;
     color: #fff;
@@ -130,7 +117,7 @@ export default {
 
 .sublineInner {
     display: inline-block;
-    max-width: 75%;
+    max-width: 45%;
     margin: 0 auto;
 }
 
@@ -162,19 +149,19 @@ export default {
     text-align: justify;
 }
 
-.cardColumnSlide {
+.cardsectionSlide {
     padding: 0 13px;
 }
 
-.cardColumn {
+.cardsection {
     padding: 13px 13px 32.5px 13px;
 }
 
-.cardColumnFirst {
+.cardsectionFirst {
     background-color: #F8EEFD;
 }
 
-.cardHeaderColumn {
+.cardHeadersection {
     margin-bottom: 39px;
 }
 
