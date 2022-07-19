@@ -8,43 +8,88 @@
             </div>
         </div>
         <div :class="[$style.layoutForm]">
-            <form :class="[$style.formColumn]">
+            <div :class="[$style.formColumn]">
                 <h3 :class="[$style.formHeadline]">03__оставить заявку</h3>
                 <div :class="[$style.formRow, $style.contactForm]">
                     <div :class="[$style.formControlWrap]">
-                        <input type="text" :class="[$style.formControl]" placeholder="Ваше имя*" name="your-name" />
+                        <input @input="isField()" name="your_name" type="text" :class="[$style.formControl]"
+                            placeholder="Ваше имя *" v-model="name" />
+                        <span id="error" v-if="!isField()">Your field is not empty</span>
                     </div>
                     <div :class="[$style.formControlWrap]">
-                        <input type="email" :class="[$style.formControl]" placeholder="Ваш email*" name="your-email" />
+                        <ValidationProvider :rules="{regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/}"
+                            v-slot="{errors}">
+                            <input @input="isEmail(errors)" name="Your email" :class="[$style.formControl]" type="email"
+                                placeholder="Ваш email*" v-model="email" />
+                            <span id="error">{{errors[0]}}</span>
+                        </ValidationProvider>
                     </div>
                 </div>
                 <div :class="[$style.formRow]">
-                    <input type="tel" :class="[$style.formControl]" placeholder="Ваш номер телефона" name="your-tel" />
+                    <ValidationProvider
+                        :rules="{regex:/((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}/}"
+                        v-slot="{ errors }">
+                        <input @input="isPhone(errors)" name="Your phone" :class="[$style.formControl]" type="text"
+                            placeholder="Ваш номер телефона" v-model="phone" />
+                        <span id="error">{{ errors[0] }}</span>
+                    </ValidationProvider>
                 </div>
-
-                <textarea :class="[$style.formControl, $style.resizeControl]" placeholder="Текст сообщения*" name="your-message"></textarea>
+                <input @input="isMessage()" name="your_message" type="text"
+                    :class="[$style.formControl, $style.resizeControl]" placeholder="Текст сообщения*" v-model="message" />
+                <span id="error" v-if="!isMessage()">Your message is not empty</span>
                 <div :class="[$style.formButton]">
                     <input type="submit" :class="[$style.formControlSubmit]" value="Отправить" />
                 </div>
-            </form>
+            </div>
         </div>
     </section>
 </template>
 <script>
+import { ValidationProvider, extend } from "vee-validate";
+import { regex } from "vee-validate/dist/rules";
+
+extend("regex", regex);
+
 export default {
     name: 'ContactUs',
+    components: {
+        ValidationProvider
+    },
+    data: function () {
+        return {
+            name: "",
+            email: "",
+            phone: "",
+            message: ""
+        }
+    },
+    methods: {
+        isField() {
+            return this.name ? this.name.length : "";
+        },
+        isEmail(errors) {
+            return errors[0].length ? true : false
+        },
+        isPhone(errors) {
+            return errors[0].length ? true : false
+        },
+        isMessage() {
+            return this.message ? this.message.length : "";
+        }
+    }
 }
 </script>
 
 <style module>
 
+
 .layout {
-    display: flex;
-    padding-top: 60px;
+display: flex;
+padding-top: 60px;
 }
 
 .layoutWrap {
-    flex: 4;
+flex: 4;
     padding: 19.5px;
 }
 
@@ -127,7 +172,7 @@ export default {
 }
 
 .resizeControl {
-    resize: none;
+    height: 85px;
 }
 .formControl::placeholder {
     color: #B2B2B9;
