@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import HeaderBar from "./HeaderBar.vue";
-import CarouselSection from "./CarouselSection.vue";
+import HeaderBar from "./partials/HeaderBar.vue";
+import CarouselSection from "./partials/CarouselSection.vue";
 import ContactSection from './ContactSection.vue';
-import AboutUs from "./AboutUs.vue";
+import AboutUs from "./partials/AboutUs.vue";
 import PriceList from "./PriceList.vue";
 import FooterBar from "./FooterBar.vue";
 import ContactUs from "./ContactUs.vue";
