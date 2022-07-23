@@ -69,7 +69,7 @@
             :alt="solution.first_name"
           />
           <div :class="[$style.cardTitle]">{{ solution.first_name }}</div>
-          <div :class="[$style.cardSubtitle]">{{ solution.last_name }}</div>
+          <div :class="[$style.cardSubtitle]">{{ solution.last_name }}: {{solution.email}}</div>
         </div>
       </div>
     </VueSlickCarousel>
