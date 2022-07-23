@@ -17,9 +17,9 @@ import HeaderBar from "./partials/HeaderBar.vue";
 import CarouselSection from "./partials/CarouselSection.vue";
 import ContactSection from './ContactSection.vue';
 import AboutUs from "./partials/AboutUs.vue";
-import PriceList from "./PriceList.vue";
+import PriceList from "./partials/PriceList.vue";
 import FooterBar from "./FooterBar.vue";
-import ContactUs from "./ContactUs.vue";
+import ContactUs from "./partials/ContactUs.vue";
 
 export default {
   name: 'IndexContent',
