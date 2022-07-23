@@ -6,12 +6,23 @@
         <div :class="[$style.widgetText]">Юрист-на-Дону</div>
       </a>
       <div :class="[$style.primaryMenu]">
-        <a v-for="link in links" :href="link.ref" :class="[$style.menuItem, $style.primaryItem]" :key="link.id">{{
-            link.text
-        }}</a>
+        <a
+          v-for="link in links"
+          :href="link.ref"
+          :class="[$style.menuItem, $style.primaryItem]"
+          :key="link.id"
+          >{{ link.text }}</a
+        >
       </div>
       <a href="#" :class="[$style.menuItem]">
-        <div :class="[$style.widgetIcon]"></div>
+        <div :class="[$style.widgetIcon]">
+          <span :class="[$style.iconContainer]">
+            <font-awesome-icon
+              :class="[$style.normalIcon]"
+              icon="fa-solid fa-phone"
+            />
+          </span>
+        </div>
         <div :class="[$style.widgetContent]">+7 (951) 839-59-39</div>
       </a>
     </nav>
@@ -19,7 +30,6 @@
 </template>
 
 <script>
-
 export default {
   name: "HeaderBar",
   data: function () {
@@ -27,7 +37,7 @@ export default {
       links: [
         { id: 1, ref: "#home", text: "Главная" },
         { id: 2, ref: "#about", text: "О проекте" },
-        { id: 3, ref: "#contacts", text: "Контакты" }
+        { id: 3, ref: "#contacts", text: "Контакты" },
       ],
     };
   },
@@ -69,11 +79,11 @@ export default {
   text-decoration: none;
 }
 
-div>a:first-child {
+div > a:first-child {
   position: relative;
 }
 
-div>a:first-child::after {
+div > a:first-child::after {
   position: absolute;
   display: block;
   content: "";
@@ -90,6 +100,18 @@ div>a:first-child::after {
   background-color: #6630ff;
 }
 
+.iconContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.normalIcon {
+  font-size: 26px;
+  color: #fff;
+}
+
 .widgetText {
   display: flex;
   align-items: center;
@@ -104,10 +126,11 @@ div>a:first-child::after {
 
 .widgetContent {
   display: flex;
+  justify-content: center;
   align-items: center;
   float: right;
+  width: 168px;
   height: 60px;
-  padding: 0 13px;
   background-color: #111;
   color: #fff;
   font-size: 14px;
