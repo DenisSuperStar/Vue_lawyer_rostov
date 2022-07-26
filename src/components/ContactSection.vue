@@ -32,7 +32,7 @@ export default {
   display: flex;
   width: 100%;
   grid-gap: 50px;
-  margin-top: 120px;
+  margin-bottom: 58.5px;
 }
 
 .location {

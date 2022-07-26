@@ -28,7 +28,10 @@
           v-for="(post, index) in posts"
           :key="index"
         >
-          <div :class="[$style.filledCard, $style.itemCard, $style.showAction]" v-if="post.id === 1">
+          <div
+            :class="[$style.filledCard, $style.itemCard, $style.showAction]"
+            v-if="post.id === 1"
+          >
             <div :class="[$style.fillCardTitle]">{{ post.title }}</div>
             <div :class="[$style.fillCardSubtitle]">{{ post.body }}</div>
           </div>
@@ -51,7 +54,10 @@
         v-for="(solution, index) in solutions"
         :key="index"
       >
-        <div :class="[$style.borderedCard, $style.itemCard, $style.showAction]" v-if="solution.id === 1">
+        <div
+          :class="[$style.borderedCard, $style.itemCard, $style.showAction]"
+          v-if="solution.id === 1"
+        >
           <img
             :src="solution.avatar"
             :class="[$style.cardImage]"
@@ -69,7 +75,9 @@
             :alt="solution.first_name"
           />
           <div :class="[$style.cardTitle]">{{ solution.first_name }}</div>
-          <div :class="[$style.cardSubtitle]">{{ solution.last_name }}: {{solution.email}}</div>
+          <div :class="[$style.cardSubtitle]">
+            {{ solution.last_name }}: {{ solution.email }}
+          </div>
         </div>
       </div>
     </VueSlickCarousel>
@@ -143,8 +151,8 @@ export default {
   align-items: center;
   width: 120px;
   height: 120px;
-  background-color: #f8eefd;
-    color: #6630ff;
+  background-color: #fff;
+  color: #6630ff;
   font-size: 60px;
 }
 
@@ -190,7 +198,7 @@ export default {
 }
 
 .filledCard {
-  background-color: #f8eefd;
+  background-color: #fff;
 }
 
 .borderedCard {

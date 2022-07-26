@@ -144,6 +144,7 @@ export default {
   display: flex;
   padding-top: 60px;
   background-color: #6630ff;
+  margin-bottom: 58.5px;
 }
 
 .layoutWrap {
