@@ -261,32 +261,21 @@ export default {
   display: block;
   width: 15px;
   height: 100%;
-  border: 2px solid #fff;
+  background-color:#fff;
   pointer-events: none;
 }
 
 .defaultCheckbox:checked + .fakerCheckbox::before {
   display: inline-block;
   content: "";
-  top: 0;
-  left: 0;
-  width: 7px;
-  height: 2px;
-  background-color: #fff;
-  transform: translateX(1px) translateY(-9px) rotate(45deg);
-  transform-origin: top left;
-}
-
-.defaultCheckbox:checked + .fakerCheckbox::after {
-  display: inline-block;
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 7px;
-  height: 2px;
-  background-color: #fff;
-  transform: translateX(4px) translateY(8px) rotate(-45deg);
+  border-top: 2px solid #6630ff;
+  border-right: 2px solid #6630ff;
+  width: 10px;
+  height: 5px;
+  transform: translateX(13px) translateY(4px) rotate(135deg);
   transform-origin: top left;
 }
 
