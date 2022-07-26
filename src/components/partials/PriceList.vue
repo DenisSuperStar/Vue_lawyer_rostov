@@ -31,7 +31,7 @@
 
             <ul :class="[$style.cardFeatures]">
               <li :class="[$style.featuresItem]">
-                <div class="[$style.featuresCheckbox]">
+                <div :class="[$style.featuresCheckbox]">
                   <input
                     type="checkbox"
                     :class="[$style.defaultCheckbox]"
@@ -42,7 +42,7 @@
                 <div :class="[$style.featuresText]">По телефону</div>
               </li>
               <li :class="[$style.featuresItem]">
-                <div class="[$style.featuresCheckbox]">
+                <div :class="[$style.featuresCheckbox]">
                   <input
                     type="checkbox"
                     :class="[$style.defaultCheckbox]"
@@ -55,7 +55,7 @@
                 >
               </li>
               <li :class="[$style.featuresItem]">
-                <div class="[$style.featuresCheckbox]">
+                <div :class="[$style.featuresCheckbox]">
                   <input
                     type="checkbox"
                     :class="[$style.defaultCheckbox]"
@@ -231,7 +231,7 @@ export default {
 
 .featuresItem {
   display: flex;
-  grid-gap: 1.3px;
+  grid-gap: 6.5px;
   font-size: 16px;
   line-height: 1.1;
   padding-bottom: 6.5px;
@@ -242,12 +242,52 @@ export default {
 }
 
 .featuresCheckbox {
+  position: relative;
+  height: 15px;
 }
 
 .defaultCheckbox {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
 }
 
 .fakerCheckbox {
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 100%;
+  border: 2px solid #fff;
+  pointer-events: none;
+}
+
+.defaultCheckbox:checked + .fakerCheckbox::before {
+  display: inline-block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 2px;
+  background-color: #fff;
+  transform: translateX(1px) translateY(-9px) rotate(45deg);
+  transform-origin: top left;
+}
+
+.defaultCheckbox:checked + .fakerCheckbox::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 2px;
+  background-color: #fff;
+  transform: translateX(4px) translateY(8px) rotate(-45deg);
+  transform-origin: top left;
 }
 
 .featuresText {
