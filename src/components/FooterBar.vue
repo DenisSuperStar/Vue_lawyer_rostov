@@ -1,62 +1,77 @@
 <template>
   <footer :class="[$style.footer]">
     <div :class="[$style.footerLeft]">
-      <div>
+      <div :class="[$style.topContent]">
         <span :class="[$style.footerTitle]">Юрист-на-Дону</span>
         <span :class="[$style.footerSubtitle]"
           >Всегда на страже ваших интересов</span
         >
       </div>
-      <div>
-        <span :class="[$style.footerTitle]">Связаться</span>
-        <div :class="[$style.contactList]">
-          <div :class="[$style.contactIcon]">
-            <font-awesome-icon icon="fa-solid fa-phone" />
-            <span :class="[$style.labelIcon]">+7 (951) 839-59-39</span>
-          </div>
-          <div :class="[$style.contactIcon]">
-            <font-awesome-icon icon="fa-solid fa-clock" />
-            <span :class="[$style.labelIcon]"
-              >Ростов-на-Дону, ул.Максима Горького, 151</span
-            >
-          </div>
-          <div :class="[$style.contactIcon]">
-            <font-awesome-icon icon="fa-solid fa-house-chimney" />
-            <span :class="[$style.labelIcon]">Пн-Вс: 10.00 - 20.00</span>
-          </div>
-          <div :class="[$style.contactIcon]">
-            <font-awesome-icon icon="fa-solid fa-envelope" />
-            <span :class="[$style.labelIcon]">sergeynazarov161@yandex.ru</span>
+      <div :class="[$style.fullWidth]">
+        <div>
+          <span :class="[$style.footerTitle]">Связаться</span>
+          <div :class="[$style.contactList]">
+            <div :class="[$style.contactIcon]">
+              <font-awesome-icon icon="fa-solid fa-phone" />
+              <span :class="[$style.labelIcon]">+7 (951) 839-59-39</span>
+            </div>
+            <div :class="[$style.contactIcon]">
+              <font-awesome-icon icon="fa-solid fa-clock" />
+              <span :class="[$style.labelIcon]"
+                >Ростов-на-Дону, ул.Максима Горького, 151</span
+              >
+            </div>
+            <div :class="[$style.contactIcon]">
+              <font-awesome-icon icon="fa-solid fa-house-chimney" />
+              <span :class="[$style.labelIcon]">Пн-Вс: 10.00 - 20.00</span>
+            </div>
+            <div :class="[$style.contactIcon]">
+              <font-awesome-icon icon="fa-solid fa-envelope" />
+              <span :class="[$style.labelIcon]"
+                >sergeynazarov161@yandex.ru</span
+              >
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <span :class="[$style.footerTitle]">Подписаться</span>
-        <div :class="[$style.socials]">
-          <div :class="[$style.social]">
-            <a href="#" :class="[$style.socialLink]">
-              <font-awesome-icon icon="fa-brands fa-twitter" />
-            </a>
+        <div>
+          <span :class="[$style.footerTitle]">Подписаться</span>
+          <div :class="[$style.socials]">
+            <div :class="[$style.social]">
+              <a href="#" :class="[$style.socialLink]">
+                <font-awesome-icon icon="fa-brands fa-twitter" />
+              </a>
+            </div>
+            <div :class="[$style.social]">
+              <a href="#" :class="[$style.socialLink]">
+                <font-awesome-icon icon="fa-brands fa-vk" />
+              </a>
+            </div>
+            <div :class="[$style.social]">
+              <a href="#" :class="[$style.socialLink]">
+                <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+              </a>
+            </div>
+            <div :class="[$style.social]">
+              <a href="#" :class="[$style.socialLink]">
+                <font-awesome-icon icon="fa-brands fa-instagram" />
+              </a>
+            </div>
           </div>
-          <div :class="[$style.social]">
-            <a href="#" :class="[$style.socialLink]">
-              <font-awesome-icon icon="fa-brands fa-vk" />
-            </a>
-          </div>
-          <div :class="[$style.social]">
-            <a href="#" :class="[$style.socialLink]">
-              <font-awesome-icon icon="fa-brands fa-linkedin-in" />
-            </a>
-          </div>
-          <div :class="[$style.social]">
-            <a href="#" :class="[$style.socialLink]">
-              <font-awesome-icon icon="fa-brands fa-instagram" />
-            </a>
+        </div>
+        <div>
+          <span :class="[$style.footerTitle, $style.textUppercase]">Бесплатная консультация</span>
+          <div :class="[$style.widget]">
+            <span :class="[$style.iconField]">
+            </span>
+            <span :class="[$style.primaryField]">
+              +7 (951) 839-59-39
+            </span>
           </div>
         </div>
       </div>
     </div>
     <div :class="[$style.footerRight]">
+      <div :class="[$style.innerContent]">
       <div :class="[$style.footerTitle, $style.titleOffset]">Услуги</div>
       <VueSlickCarousel
         :arrows="false"
@@ -86,6 +101,7 @@
           </div>
         </div>
       </VueSlickCarousel>
+      </div>
     </div>
   </footer>
 </template>
@@ -166,8 +182,8 @@ export default {
 
 .footerLeft {
   display: flex;
-  grid-gap: 16px;
-  max-width: calc(800px - 13px);
+  flex-wrap: wrap;
+  width: 50%;
 }
 
 .footerLeft::before {
@@ -178,10 +194,45 @@ export default {
   background-color: #fff;
 }
 
+.topContent {
+  padding-left: 13px;
+}
+
 .footerRight {
   display: flex;
   flex-direction: column;
+  width: 50%;
+}
+
+.innerContent {
   max-width: 800px;
+  margin: 0 auto;
+}
+
+.widget {
+  display: flex;
+}
+
+.iconField {
+  display:block;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+}
+
+.primaryField {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+.fullWidth {
+  width: 100%;
 }
 
 .footerTitle {
@@ -190,6 +241,24 @@ export default {
   line-height: 1.1;
   color: #fff;
   padding-bottom: 13px;
+}
+
+.textUppercase {
+  text-transform: uppercase;
+}
+
+.socials {
+  display: flex;
+  grid-gap: 13px;
+}
+
+.social {
+  background-color: #fff;
+  padding: 6.5px;
+}
+
+.socialLink {
+  color: #6630ff;
 }
 
 .titleOffset {
