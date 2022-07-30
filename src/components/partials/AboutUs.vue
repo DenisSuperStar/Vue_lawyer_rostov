@@ -158,6 +158,7 @@ export default {
 
 .sectionHeadline {
   font-size: 16px;
+  line-height: 1.1;
   text-transform: uppercase;
   color: #fff;
   padding: 130px 0 6.5px;
