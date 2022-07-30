@@ -331,5 +331,9 @@ export default {
     margin: 0;
     padding: 0 26px;
   }
+
+  .carouselSlide {
+    padding: 0;
+  }
 }
 </style>
