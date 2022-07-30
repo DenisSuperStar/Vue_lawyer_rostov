@@ -1,6 +1,6 @@
 <template>
   <section :class="[$style.mainContent]">
-    <VueSlickCarousel :arrows="false" :dots="true">
+    <VueSlickCarousel v-bind="settings">
       <div v-for="(i, index) in list" :class="[$style.slide]" :key="index">
         <div :class="[$style.slideContent]">
           <h3 :class="[$style.slideTitle]">{{ i.title }}</h3>
@@ -30,6 +30,44 @@ export default {
         title: "",
         body: "",
       }),
+      settings: {
+        arrows: false,
+        dots: true,
+        infinite: true,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 360,
+            settings: {
+              arrows: false,
+              dots: false,
+              touchMove: true,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              arrows: false,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 1366,
+            settings: {
+              arrows: true,
+              dots: false,
+              touchMove: true,
+            },
+          },
+        ],
+      },
     };
   },
   created() {
@@ -75,6 +113,23 @@ export default {
   font-size: 24px;
   line-height: 1.1;
   max-width: 50%;
+}
+
+@media all and (max-width: 360px) {
+  .slide {
+    padding: 0;
+  }
+
+  .slideContent {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .slideText {
+    max-width: 100%;
+  }
 }
 </style>
 
