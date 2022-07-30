@@ -72,7 +72,7 @@
       </div>
     </div>
     <div :class="[$style.footerRight]">
-      <div :class="[$style.innerContent]">
+      <div :class="[$style.columnInnerContent]">
         <div :class="[$style.footerTitle, $style.titleOffset]">Услуги</div>
         <VueSlickCarousel v-bind="services">
           <div
@@ -214,7 +214,7 @@ export default {
   flex-direction: column;
 }
 
-.innerContent {
+.columnInnerContent {
   max-width: 820px;
   margin: 0 auto;
 }
@@ -420,8 +420,27 @@ export default {
     display: block;
   }
 
-  .topContent {
+   .topContent {
     padding-left: 6.5px;
+  }
+
+  .footerRight {
+    display: block;
+  }
+
+  .columnInnerContent {
+    max-width: 360px;
+    margin: 0;
+  }
+
+  .footerTitle {
+    padding-top: 13px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .priceListItem {
+    padding: 0;
   }
 }
 </style>
