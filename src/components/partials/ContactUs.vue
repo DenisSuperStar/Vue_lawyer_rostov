@@ -296,4 +296,23 @@ export default {
   border: none;
   cursor: auto;
 }
+
+@media all and (max-width: 360px) {
+  .layout,
+  .contactForm {
+    display: block;
+  }
+
+  .layoutWrap {
+    margin-bottom: 19.5px;
+  }
+
+  .formControlWrap:first-child {
+    padding-bottom: 6.5px;
+  }
+
+  .invalidField {
+    position: relative;
+  }
+}
 </style>
