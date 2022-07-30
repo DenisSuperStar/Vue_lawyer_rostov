@@ -215,7 +215,7 @@ export default {
 }
 
 .columnInnerContent {
-  max-width: 820px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
