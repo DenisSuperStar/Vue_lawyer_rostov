@@ -3,11 +3,18 @@
     <div :class="[$style.textBoxContaner]">
       <div :class="[$style.sectionName]">04__контакты</div>
       <div :class="[$style.sectionTitle]">Мы здесь ради вас</div>
-      <div :class="[$style.sectionSubtitle]">c 10.00 до 20.00, 5 дней в неделю</div>
+      <div :class="[$style.sectionSubtitle]">
+        c 10.00 до 20.00, 5 дней в неделю
+      </div>
     </div>
     <div :class="[$style.mapContainer]">
       <yandex-map :coords="coords" :zoom="zoom" :scroll-zoom="false">
-        <ymap-marker :coords="coords" marker-id="911078e7-7048-4f7b-b9fb-c918fbb2f790" :icon="markerIcon" :hint-content="hint">
+        <ymap-marker
+          :coords="coords"
+          marker-id="911078e7-7048-4f7b-b9fb-c918fbb2f790"
+          :icon="markerIcon"
+          :hint-content="hint"
+        >
         </ymap-marker>
       </yandex-map>
     </div>
@@ -40,41 +47,41 @@ export default {
 </script>
 
 <style module>
-  .locationSection {
-    display: flex;
-    grid-gap: 50px;
-    margin-bottom: 58.5px;
-  }
+.locationSection {
+  display: flex;
+  grid-gap: 50px;
+  margin-bottom: 58.5px;
+}
 
-  .textBoxContaner {
-    flex: 4;
-    text-align: right;
-  }
+.textBoxContaner {
+  flex: 4;
+  text-align: right;
+}
 
-  .mapContainer {
-    flex: 6;
-  }
+.mapContainer {
+  flex: 6;
+}
 
-  .sectionName {
-    font-size: 16px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    color: #6630ff;
-    padding-bottom: 39px;
-  }
+.sectionName {
+  font-size: 16px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #6630ff;
+  padding-bottom: 39px;
+}
 
-  .sectionTitle {
-    font-size: 35px;
-    line-height: 1.2;
-    color: #111;
-    padding-bottom: 6.5px;
-  }
+.sectionTitle {
+  font-size: 35px;
+  line-height: 1.2;
+  color: #111;
+  padding-bottom: 6.5px;
+}
 
-  .sectionSubtitle {
-    font-size: 35px;
-    line-height: 1.2;
-    color: #111;
-  }
+.sectionSubtitle {
+  font-size: 35px;
+  line-height: 1.2;
+  color: #111;
+}
 </style>
 
 <style scoped>
