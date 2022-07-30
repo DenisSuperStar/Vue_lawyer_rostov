@@ -5,7 +5,7 @@
         <font-awesome-icon icon="fa-solid fa-briefcase" />
       </div>
       <h3 :class="[$style.priceListTitle]">02__Прайс лист</h3>
-      <VueSlickCarousel v-bind="settings">
+      <VueSlickCarousel v-bind="services">
         <div
           :class="[$style.priceListItem]"
           v-for="(service, index) in serviceList"
@@ -92,7 +92,7 @@ export default {
         subtitle: "",
         price: null,
       }),
-      settings: {
+      services: {
         arrows: false,
         dots: false,
         touchMove: true,
@@ -103,28 +103,28 @@ export default {
         responsive: [
           {
             breakpoint: 360,
-            settings: {
+            services: {
               slidesToShow: 1,
               slidesToScroll: 1,
             },
           },
           {
             breakpoint: 768,
-            settings: {
+            services: {
               slidesToShow: 1,
               slidesToScroll: 1,
             },
           },
           {
             breakpoint: 1024,
-            settings: {
+            services: {
               slidesToShow: 2,
               slidesToScroll: 2,
             },
           },
           {
             breakpoint: 1366,
-            settings: {
+            services: {
               slidesToShow: 2,
               slidesToScroll: 2,
             },
