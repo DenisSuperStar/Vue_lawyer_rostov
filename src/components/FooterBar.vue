@@ -74,13 +74,7 @@
     <div :class="[$style.footerRight]">
       <div :class="[$style.innerContent]">
         <div :class="[$style.footerTitle, $style.titleOffset]">Услуги</div>
-        <VueSlickCarousel
-          :arrows="false"
-          :dots="false"
-          :touchMove="true"
-          :slidesToShow="3"
-          :slidesToScroll="3"
-        >
+        <VueSlickCarousel v-bind="services">
           <div
             :class="[$style.priceListItem]"
             v-for="(service, index) in serviceList"
@@ -126,6 +120,45 @@ export default {
         subtitle: "",
         price: null,
       }),
+      services: {
+        arrows: false,
+        dots: false,
+        touchMove: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 360,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 1366,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+        ],
+      },
     };
   },
   created() {
@@ -380,5 +413,15 @@ export default {
   width: 100%;
   height: 1px;
   background-color: #6630ff;
+}
+
+@media all and (max-width: 360px) {
+  .footer {
+    display: block;
+  }
+
+  .topContent {
+    padding-left: 6.5px;
+  }
 }
 </style>
