@@ -227,7 +227,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   background-color: #fff;
 }
@@ -420,7 +420,7 @@ export default {
     display: block;
   }
 
-   .topContent {
+  .topContent {
     padding-left: 6.5px;
   }
 
@@ -437,6 +437,10 @@ export default {
     padding-top: 13px;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .primaryField {
+    width: 100%;
   }
 
   .priceListItem {
