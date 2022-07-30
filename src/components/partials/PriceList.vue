@@ -93,40 +93,40 @@ export default {
         price: null,
       }),
       services: {
-        arrows: false,
-        dots: false,
-        touchMove: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        initialSlide: 0,
-        responsive: [
+        "arrows": false,
+        "dots": false,
+        "touchMove": true,
+        "slidesToShow": 3,
+        "slidesToScroll": 3,
+        "infinite": true,
+        "initialSlide": 0,
+        "responsive": [
           {
-            breakpoint: 360,
-            services: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
+            "breakpoint": 360,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1,
             },
           },
           {
-            breakpoint: 768,
-            services: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
+            "breakpoint": 768,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1,
             },
           },
           {
-            breakpoint: 1024,
-            services: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
+            "breakpoint": 1024,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
             },
           },
           {
-            breakpoint: 1366,
-            services: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
+            "breakpoint": 1366,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
             },
           },
         ],
