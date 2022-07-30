@@ -141,8 +141,8 @@ export default {
         arrows: false,
         dots: false,
         touchMove: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 6,
+        slidesToScroll: 6,
         initialSlide: 0,
         infinite: true,
         responsive: [
