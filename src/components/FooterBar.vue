@@ -7,33 +7,30 @@
           >Всегда на страже ваших интересов</span
         >
       </div>
-      <div :class="[$style.fullWidth]">
-        <div>
+      <div :class="[$style.columnContent]">
+        <div :class="[$style.columnContentInner]">
           <span :class="[$style.footerTitle]">Связаться</span>
-          <div :class="[$style.contactList]">
-            <div :class="[$style.contactIcon]">
-              <font-awesome-icon icon="fa-solid fa-phone" />
-              <span :class="[$style.labelIcon]">+7 (951) 839-59-39</span>
-            </div>
-            <div :class="[$style.contactIcon]">
-              <font-awesome-icon icon="fa-solid fa-clock" />
-              <span :class="[$style.labelIcon]"
-                >Ростов-на-Дону, ул.Максима Горького, 151</span
-              >
-            </div>
-            <div :class="[$style.contactIcon]">
-              <font-awesome-icon icon="fa-solid fa-house-chimney" />
-              <span :class="[$style.labelIcon]">Пн-Вс: 10.00 - 20.00</span>
-            </div>
-            <div :class="[$style.contactIcon]">
-              <font-awesome-icon icon="fa-solid fa-envelope" />
-              <span :class="[$style.labelIcon]"
-                >sergeynazarov161@yandex.ru</span
-              >
-            </div>
+
+          <div :class="[$style.iconHolder]">
+            <font-awesome-icon icon="fa-solid fa-phone" />
+            <span :class="[$style.labelIcon]">+7 (951) 839-59-39</span>
+          </div>
+          <div :class="[$style.iconHolder]">
+            <font-awesome-icon icon="fa-solid fa-clock" />
+            <span :class="[$style.labelIcon]"
+              >Ростов-на-Дону, ул.Максима Горького, 151</span
+            >
+          </div>
+          <div :class="[$style.iconHolder]">
+            <font-awesome-icon icon="fa-solid fa-house-chimney" />
+            <span :class="[$style.labelIcon]">Пн-Вс: 10.00 - 20.00</span>
+          </div>
+          <div :class="[$style.iconHolder]">
+            <font-awesome-icon icon="fa-solid fa-envelope" />
+            <span :class="[$style.labelIcon]">sergeynazarov161@yandex.ru</span>
           </div>
         </div>
-        <div>
+        <div :class="[$style.columnContentInner]">
           <span :class="[$style.footerTitle]">Подписаться</span>
           <div :class="[$style.socials]">
             <div :class="[$style.social]">
@@ -58,49 +55,53 @@
             </div>
           </div>
         </div>
-        <div>
-          <span :class="[$style.footerTitle, $style.textUppercase]">Бесплатная консультация</span>
+        <div :class="[$style.columnContentInner]">
+          <span :class="[$style.footerTitle, $style.textUppercase]"
+            >Бесплатная консультация</span
+          >
           <div :class="[$style.widget]">
             <span :class="[$style.iconField]">
+              <font-awesome-icon
+                :class="[$style.widgetFilledIcon]"
+                icon="fa-solid fa-phone"
+              />
             </span>
-            <span :class="[$style.primaryField]">
-              +7 (951) 839-59-39
-            </span>
+            <span :class="[$style.primaryField]"> +7 (951) 839-59-39 </span>
           </div>
         </div>
       </div>
     </div>
     <div :class="[$style.footerRight]">
       <div :class="[$style.innerContent]">
-      <div :class="[$style.footerTitle, $style.titleOffset]">Услуги</div>
-      <VueSlickCarousel
-        :arrows="false"
-        :dots="false"
-        :touchMove="true"
-        :slidesToShow="3"
-        :slidesToScroll="3"
-      >
-        <div
-          :class="[$style.priceListItem]"
-          v-for="(service, index) in serviceList"
-          :key="index"
+        <div :class="[$style.footerTitle, $style.titleOffset]">Услуги</div>
+        <VueSlickCarousel
+          :arrows="false"
+          :dots="false"
+          :touchMove="true"
+          :slidesToShow="3"
+          :slidesToScroll="3"
         >
-          <div :class="[$style.infoCard]">
-            <div :class="[$style.infoHeader]">
-              <div :class="[$style.columnLeft]">
-                <div :class="[$style.infoTitle]">
-                  {{ service.title }}
+          <div
+            :class="[$style.priceListItem]"
+            v-for="(service, index) in serviceList"
+            :key="index"
+          >
+            <div :class="[$style.infoCard]">
+              <div :class="[$style.infoHeader]">
+                <div :class="[$style.sideLeft]">
+                  <div :class="[$style.infoTitle]">
+                    {{ service.title }}
+                  </div>
+                </div>
+                <div :class="[$style.sideRight]">
+                  <div :class="[$style.contentInfo]">{{ service.price }}</div>
                 </div>
               </div>
-              <div :class="[$style.columnRight]">
-                <div :class="[$style.contentInfo]">{{ service.price }}</div>
-              </div>
-            </div>
 
-            <a href="#" :class="[$style.pricingButton]">Выбрать</a>
+              <a href="#" :class="[$style.pricingButton]">Выбрать</a>
+            </div>
           </div>
-        </div>
-      </VueSlickCarousel>
+        </VueSlickCarousel>
       </div>
     </div>
   </footer>
@@ -119,27 +120,6 @@ export default {
   },
   data: function () {
     return {
-      socialIcons: [
-        { id: 1, ref: "https://vk.com/", path: "./images/vk.svg", name: "VK" },
-        {
-          id: 2,
-          ref: "https://twitter.com/",
-          path: "/images/twitter.svg",
-          name: "TW",
-        },
-        {
-          id: 3,
-          ref: "https://instagram.com/",
-          path: "./images/instagram.svg",
-          name: "Ig",
-        },
-        {
-          id: 4,
-          ref: "https://ru.linkedin.com/",
-          path: "./images/linkedin.svg",
-          name: "IN",
-        },
-      ],
       priceList: [],
       serviceList: Array(26).fill({
         title: "",
@@ -175,7 +155,6 @@ export default {
 .footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   padding: 97.5px 45.5px 26px 39px;
   background-color: #6630ff;
 }
@@ -183,7 +162,6 @@ export default {
 .footerLeft {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
 }
 
 .footerLeft::before {
@@ -201,11 +179,10 @@ export default {
 .footerRight {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
 
 .innerContent {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
@@ -214,25 +191,36 @@ export default {
 }
 
 .iconField {
-  display:block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   background-color: #fff;
+}
+
+.widgetFilledIcon {
+  font-size: 26px;
+  color: #6630ff;
 }
 
 .primaryField {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 168px;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
   color: #fff;
 }
 
-.fullWidth {
+.columnContent {
   width: 100%;
+}
+
+.columnContentInner {
+  padding-top: 19.5px;
 }
 
 .footerTitle {
@@ -245,6 +233,19 @@ export default {
 
 .textUppercase {
   text-transform: uppercase;
+}
+
+.iconHolder {
+  padding-bottom: 6.5px;
+  color: #fff;
+}
+
+.iconHolder:last-child {
+  padding-bottom: 0;
+}
+
+.labelIcon {
+  padding-left: 6.5px;
 }
 
 .socials {
@@ -274,19 +275,14 @@ export default {
   padding-bottom: 13px;
 }
 
-.columnLeft {
+.sideLeft {
   flex: 7;
-  padding-right: 1.3px;
+  padding-right: 6.5px;
 }
 
-.columnRight {
+.sideRight {
   flex: 3;
-  padding-left: 1.3px;
-}
-
-.carouselWrapper {
-  max-width: 576px;
-  margin: 0 auto;
+  padding-left: 6.5px;
 }
 
 .priceListItem {
