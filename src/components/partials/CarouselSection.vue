@@ -15,28 +15,30 @@
 
 <script>
 import axios from "axios";
-import VueSlickCarousel from 'vue-slick-carousel';
-import 'vue-slick-carousel/dist/vue-slick-carousel.css';
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   name: "CarouselSection",
   components: {
-    VueSlickCarousel
+    VueSlickCarousel,
   },
   data: function () {
     return {
       list: Array(25).fill({
         title: "",
-        body: ""
-      })
+        body: "",
+      }),
     };
   },
   created() {
-    axios.get('https://jsonplaceholder.typicode.com/posts?_limit=26').then(res => {
-      this.list = res.data;
-    });
-  }
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts?_limit=26")
+      .then((res) => {
+        this.list = res.data;
+      });
+  },
 };
 </script>
 
@@ -78,7 +80,7 @@ export default {
 
 <style>
 .slick-slider {
-    height: 900px;
+  height: 900px;
 }
 
 .slick-dots {

@@ -16,9 +16,7 @@
           </div>
         </div>
       </div>
-      <VueSlickCarousel
-        v-bind="settings1"
-      >
+      <VueSlickCarousel v-bind="presentation">
         <div
           :class="[$style.carouselSlide]"
           v-for="(post, index) in posts"
@@ -38,9 +36,7 @@
         </div>
       </VueSlickCarousel>
     </div>
-    <VueSlickCarousel
-      v-bind="settings2"
-    >
+    <VueSlickCarousel v-bind="competencies">
       <div
         :class="[$style.carouselSlide]"
         v-for="(solution, index) in solutions"
@@ -102,84 +98,84 @@ export default {
         id: null,
         last_name: "",
       }),
-      settings1: {
-        "dots": false,
-        "arrows": false,
-        "touchMove": true,
-        "slidesToShow": 3,
-        "slidesToScroll": 3,
-        "initialSlide": 0,
-        "infinite": true,
-        "responsive": [
+      presentation: {
+        dots: false,
+        arrows: false,
+        touchMove: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 0,
+        infinite: true,
+        responsive: [
           {
-            "breakpoint": 366,
-            "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1
-            }
+            breakpoint: 366,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
           },
           {
-            "breakpoint": 768,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToscroll": 2
-            }
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToscroll: 2,
+            },
           },
           {
-            "breakpoint": 1024,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToScroll": 2
-            }
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
           },
           {
-            "breakpoint": 1366,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToScroll": 2
-            }
+            breakpoint: 1366,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
           },
-        ]
+        ],
       },
-      settings2: {
-        "arrows": false,
-        "dots": false,
-        "touchMove": true,
-        "slidesToShow": 3,
-        "slidesToScroll": 3,
-        "initialSlide": 0,
-        "infinite": true,
-        "responsive": [
+      competencies: {
+        arrows: false,
+        dots: false,
+        touchMove: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 0,
+        infinite: true,
+        responsive: [
           {
-            "breakpoint": 360,
-            "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1
-            }
+            breakpoint: 360,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
           },
           {
-            "breakpoint": 768,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToScroll": 2
-            }
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
           },
           {
-            "breakpoint": 1024,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToScroll": 2
-            }
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
           },
           {
-            "breakpoint": 1366,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToScroll": 2
-            }
-          }
-        ]
-      }
+            breakpoint: 1366,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+        ],
+      },
     };
   },
   created() {
