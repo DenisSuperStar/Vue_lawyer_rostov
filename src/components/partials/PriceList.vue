@@ -19,7 +19,7 @@
         >
           <div :class="[$style.infoCard]">
             <div :class="[$style.infoHeader]">
-              <div :class="[$style.columnLeft]">
+              <div :class="[$style.sideLeft]">
                 <div :class="[$style.infoTitle]">
                   {{ service.title }}
                 </div>
@@ -27,7 +27,7 @@
                   {{ service.subtitle }}
                 </div>
               </div>
-              <div :class="[$style.columnRight]">
+              <div :class="[$style.sideRight]">
                 <div :class="[$style.contentInfo]">{{ service.price }}</div>
               </div>
             </div>
@@ -169,12 +169,12 @@ export default {
   display: flex;
 }
 
-.columnLeft {
+.sideLeft {
   flex: 7;
   padding-right: 6.5px;
 }
 
-.columnRight {
+.sideRight {
   flex: 3;
   padding-left: 6.5px;
 }
