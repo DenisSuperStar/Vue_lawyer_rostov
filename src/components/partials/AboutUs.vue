@@ -151,7 +151,7 @@ export default {
         "infinite": true,
         "responsive": [
           {
-            "breakpoint": 366,
+            "breakpoint": 360,
             "settings": {
               "slidesToShow": 1,
               "slidesToScroll": 1
@@ -202,8 +202,8 @@ export default {
 .sectionContent {
   background-color: #6630ff;
   text-align: right;
-  padding: 1px 60px 40px 60px;
-  margin-bottom: calc(52px - 13px);
+  padding: 1.3px 58.5px 39px 58.5px;
+  margin-bottom: calc(58.5px - 13px);
 }
 
 .sectionInner {
@@ -235,7 +235,7 @@ export default {
   line-height: 1.1;
   text-transform: uppercase;
   color: #fff;
-  padding: 250px 0 6.5px;
+  padding: 260px 0 6.5px;
 }
 
 .sectionSubline {
@@ -325,7 +325,7 @@ export default {
   margin-bottom: 39px;
 }
 
-@media all and (max-width: 366px) {
+@media all and (max-width: 360px) {
   .sectionContent {
     padding: 0;
   }
