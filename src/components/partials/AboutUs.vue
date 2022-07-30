@@ -17,11 +17,7 @@
         </div>
       </div>
       <VueSlickCarousel
-        :arrows="false"
-        :dots="false"
-        :touchMove="true"
-        :slidesToShow="3"
-        :slidesToScroll="3"
+        v-bind="settings1"
       >
         <div
           :class="[$style.carouselSlide]"
@@ -43,11 +39,7 @@
       </VueSlickCarousel>
     </div>
     <VueSlickCarousel
-      :arrows="false"
-      :dots="false"
-      :touchMove="true"
-      :slidesToShow="6"
-      :slidesToScroll="6"
+      v-bind="settings2"
     >
       <div
         :class="[$style.carouselSlide]"
@@ -110,6 +102,84 @@ export default {
         id: null,
         last_name: "",
       }),
+      settings1: {
+        "dots": false,
+        "arrows": false,
+        "touchMove": true,
+        "slidesToShow": 3,
+        "slidesToScroll": 3,
+        "initialSlide": 0,
+        "infinite": true,
+        "responsive": [
+          {
+            "breakpoint": 366,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1
+            }
+          },
+          {
+            "breakpoint": 768,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToscroll": 2
+            }
+          },
+          {
+            "breakpoint": 1024,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2
+            }
+          },
+          {
+            "breakpoint": 1366,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2
+            }
+          },
+        ]
+      },
+      settings2: {
+        "arrows": false,
+        "dots": false,
+        "touchMove": true,
+        "slidesToShow": 3,
+        "slidesToScroll": 3,
+        "initialSlide": 0,
+        "infinite": true,
+        "responsive": [
+          {
+            "breakpoint": 366,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1
+            }
+          },
+          {
+            "breakpoint": 768,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2
+            }
+          },
+          {
+            "breakpoint": 1024,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2
+            }
+          },
+          {
+            "breakpoint": 1366,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2
+            }
+          }
+        ]
+      }
     };
   },
   created() {
@@ -141,11 +211,15 @@ export default {
 }
 
 .sectionInfo {
+  position: relative;
   max-width: calc(50% - 9.75px);
   margin-left: auto;
 }
 
 .filledIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,7 +235,7 @@ export default {
   line-height: 1.1;
   text-transform: uppercase;
   color: #fff;
-  padding: 130px 0 6.5px;
+  padding: 250px 0 6.5px;
 }
 
 .sectionSubline {
@@ -249,5 +323,17 @@ export default {
   display: block;
   width: 100%;
   margin-bottom: 39px;
+}
+
+@media all and (max-width: 366px) {
+  .sectionContent {
+    padding: 0;
+  }
+
+  .sectionInfo {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 26px;
+  }
 }
 </style>

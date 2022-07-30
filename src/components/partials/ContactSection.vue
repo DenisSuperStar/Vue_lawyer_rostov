@@ -82,6 +82,12 @@ export default {
   line-height: 1.2;
   color: #111;
 }
+
+@media all and (max-width: 366px) {
+  .locationSection {
+    display: block;
+  }
+}
 </style>
 
 <style scoped>
