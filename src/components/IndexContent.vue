@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import HeaderBar from "./partials/HeaderBar.vue";
+import HeaderBar from "./HeaderBar.vue";
 import CarouselSection from "./partials/CarouselSection.vue";
-import ContactSection from './ContactSection.vue';
+import ContactSection from './partials/ContactSection.vue';
 import AboutUs from "./partials/AboutUs.vue";
 import PriceList from "./partials/PriceList.vue";
 import FooterBar from "./FooterBar.vue";
