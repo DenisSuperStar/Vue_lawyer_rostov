@@ -5,7 +5,7 @@
         <div :class="[$style.layoutImgBorder]">
           <img
             :class="[$style.innerImg]"
-            src="../../../public/assets/leader.svg"
+            :src="leaderPhoto"
             alt="Фото сооснователя"
           />
         </div>
@@ -110,6 +110,7 @@
 <script>
 import { ValidationProvider, extend } from "vee-validate";
 import { regex } from "vee-validate/dist/rules";
+import leader from '../../public/assets/leader.svg';
 
 extend("regex", regex);
 
@@ -120,6 +121,7 @@ export default {
   },
   data: function () {
     return {
+      leaderPhoto: leader, 
       name: "",
       email: "",
       phone: "",
