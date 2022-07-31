@@ -298,13 +298,17 @@ export default {
 }
 
 @media all and (max-width: 360px) {
-  .layout,
-  .contactForm {
+  .layout {
     display: block;
+    padding: 0;
   }
 
   .layoutWrap {
     margin-bottom: 19.5px;
+  }
+
+  .contactForm {
+    display: block;
   }
 
   .formControlWrap:first-child {

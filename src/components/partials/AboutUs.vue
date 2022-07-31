@@ -324,16 +324,58 @@ export default {
 @media all and (max-width: 360px) {
   .sectionContent {
     padding: 0;
+    margin-bottom: 58.5px;
   }
 
   .sectionInfo {
     max-width: 100%;
     margin: 0;
-    padding: 0 26px;
+    padding: 0 19.5px;
+  }
+
+  .filledIcon {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    border-top: 2px solid #6630ff;
+    border-right: 2px solid #6630ff;
+  }
+
+  .sectionHeadline {
+    padding-left: 6.5px;
+    padding-right: 6.5px;
+    padding-bottom: 26px;
+  }
+
+  .sectionSubline {
+    padding-left: 6.5px;
+    padding-right: 6.5px;
+    padding-bottom: 58.5px;
   }
 
   .carouselSlide {
     padding: 0;
+  }
+
+  .itemCard {
+    border-left: 2px solid #6630ff;
+    border-right: 2px solid #6630ff;
+    border-bottom: 2px solid #6630ff;
+    padding: 19.5px 19.5px 32.5px;
+  }
+
+  .fillCardTitle {
+    font-size: 18.85px;
+    padding-left: 6.5px;
+    padding-right: 6.5px;
+    text-align: left;
+  }
+
+  .fillCardSubtitle {
+    padding-left: 6.5px;
+    padding-right: 6.5px;
+    text-align: left;
   }
 }
 </style>

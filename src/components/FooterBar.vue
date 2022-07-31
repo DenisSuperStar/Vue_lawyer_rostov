@@ -415,7 +415,7 @@ export default {
   background-color: #6630ff;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
   .footer {
     display: block;
   }

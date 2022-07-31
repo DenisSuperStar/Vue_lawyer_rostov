@@ -5,7 +5,7 @@
         <font-awesome-icon icon="fa-solid fa-briefcase" />
       </div>
       <h3 :class="[$style.priceListTitle]">02__Прайс лист</h3>
-      <VueSlickCarousel v-bind="services">
+      <VueSlickCarousel v-bind="services" style="height: 300px;">
         <div
           :class="[$style.priceListItem]"
           v-for="(service, index) in serviceList"
@@ -162,6 +162,7 @@ export default {
 }
 
 .priceListFlowAround {
+  position: relative;
   padding: 0 13px;
 }
 
@@ -310,6 +311,42 @@ export default {
 
 .pricingButton::after {
   content: none !important;
+}
+
+@media all and (max-width: 360px) {
+  .priceListContainer {
+    margin-top: 58.5px;
+    padding-bottom: 58.5px;
+  }
+
+  .priceListFlowAround {
+    padding: 0 1.3px;
+  }
+
+  .filledIconReverse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 2px solid #6630ff;
+    border-right: 2px solid #6630ff;
+  }
+
+  .priceListTitle {
+    padding-top: 260px;
+  }
+
+  .priceListItem {
+    padding: 0;
+  }
+
+  .infoCard {
+    padding: 19.5px;
+  }
+
+  .cardFetures {
+    padding-left: 6.5px;
+    padding-right: 6.5px;
+  }
 }
 </style>
 

@@ -123,11 +123,20 @@ export default {
   .slideContent {
     max-width: 100%;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 0 19.5px;
+    text-align: left;
+  }
+
+  .slideTitle {
+    font-size: 34px;
+    padding-left: 6.5px;
+    padding-right: 6.5px;
   }
 
   .slideText {
+    font-size: 16px;
+    padding-left: 6.5px;
+    padding-right: 6.5px;
     max-width: 100%;
   }
 }

@@ -83,7 +83,7 @@ export default {
   color: #111;
 }
 
-@media all and (max-width: 366px) {
+@media all and (max-width: 768px) {
   .locationSection {
     display: block;
   }
