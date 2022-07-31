@@ -144,9 +144,7 @@ export default {
 <style module>
 .layout {
   display: flex;
-  padding-top: 60px;
   background-color: #6630ff;
-  margin-bottom: 58.5px;
 }
 
 .layoutWrap {
@@ -327,6 +325,13 @@ export default {
 @media all and (min-width: 768px) {
   .layoutWrap {
     margin-bottom: 130px;
+  }
+}
+
+@media all and (min-width: 1366px) {
+  .layout {
+    margin-bottom: 58.5px;
+    padding-top: 58.5px;
   }
 }
 </style>

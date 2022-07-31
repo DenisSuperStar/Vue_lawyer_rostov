@@ -201,7 +201,6 @@ export default {
   background-color: #6630ff;
   text-align: right;
   padding: 1.3px 58.5px 39px 58.5px;
-  margin-bottom: calc(58.5px - 13px);
 }
 
 .sectionInner {
@@ -419,6 +418,10 @@ export default {
 }
 
 @media all and (min-width: 1366px) {
+  .sectionContent {
+    margin-bottom: 58.5px;
+  }
+
   .sectionInfo {
     position: relative;
   }

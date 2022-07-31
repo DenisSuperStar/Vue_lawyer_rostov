@@ -360,6 +360,13 @@ export default {
     padding-bottom: 65px;
   }
 }
+
+@media all and (min-width: 1366px) {
+  .priceListContainer {
+    margin-top: 58.5px;
+    padding: 0;
+  }
+}
 </style>
 
 <style>

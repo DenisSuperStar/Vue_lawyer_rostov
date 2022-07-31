@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <IndexContent></IndexContent>
+    <IndexView />
   </div>
 </template>
 
 <script>
-import IndexContent from "./components/IndexContent";
+import IndexView from "./views/IndexView.vue";
 
 export default {
   name: "App",
   components: {
-    IndexContent,
+    IndexView,
   },
 };
 </script>
@@ -24,7 +24,9 @@ export default {
 
 *::before,
 *::after {
-  box-sizing: border-box;}html {
+  box-sizing: border-box;
+}
+html {
   color: #000;
   background-color: #fff;
 }
