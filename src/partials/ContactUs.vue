@@ -300,11 +300,6 @@ export default {
 }
 
 @media all and (max-width: 360px) {
-  .layout {
-    display: block;
-    padding: 0;
-  }
-
   .layoutWrap {
     margin-bottom: 19.5px;
   }
@@ -319,6 +314,19 @@ export default {
 
   .invalidField {
     position: relative;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .layout {
+    display: block;
+    padding: 0;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .layoutWrap {
+    margin-bottom: 130px;
   }
 }
 </style>

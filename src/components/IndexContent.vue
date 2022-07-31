@@ -48,4 +48,10 @@ export default {
   background-size: cover;
   margin-bottom: 58.5px;
 }
+
+@media all and (min-width: 768px) {
+  .indexBackground {
+    margin-bottom: 130px;
+  }
+}
 </style>

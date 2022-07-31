@@ -99,40 +99,42 @@ export default {
         last_name: "",
       }),
       presentation: {
-        dots: false,
-        arrows: false,
-        touchMove: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 0,
-        infinite: true,
-        responsive: [
+        "dots": false,
+        "arrows": false,
+        "touchMove": true,
+        "slidesToShow": 3,
+        "slidesToScroll": 3,
+        "initialSlide": 0,
+        "infinite": true,
+        "responsive": [
           {
-            breakpoint: 366,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
+            "breakpoint": 360,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1,
+              "arrows": true
             },
           },
           {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToscroll: 2,
+            "breakpoint": 768,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToscroll": 1,
+              "arrows": true
             },
           },
           {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
+            "breakpoint": 1024,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
             },
           },
           {
-            breakpoint: 1366,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
+            "breakpoint": 1366,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
             },
           },
         ],
@@ -207,7 +209,6 @@ export default {
 }
 
 .sectionInfo {
-  position: relative;
   max-width: calc(50% - 9.75px);
   margin-left: auto;
 }
@@ -328,18 +329,8 @@ export default {
   }
 
   .sectionInfo {
-    max-width: 100%;
-    margin: 0;
+    position: relative;
     padding: 0 19.5px;
-  }
-
-  .filledIcon {
-    position: absolute;
-    top: 0;
-    left: auto;
-    right: 0;
-    border-top: 2px solid #6630ff;
-    border-right: 2px solid #6630ff;
   }
 
   .sectionHeadline {
@@ -376,6 +367,51 @@ export default {
     padding-left: 6.5px;
     padding-right: 6.5px;
     text-align: left;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .sectionInfo {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .filledIcon {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    border-top: 2px solid #6630ff;
+    border-right: 2px solid #6630ff;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .sectionContent {
+    position: relative;
+    margin-bottom: 130px;
+  }
+
+  .sectionHeadline {
+    padding-bottom: 26px;
+  }
+
+  .sectionSubline {
+    padding-bottom: 58.5px;
+  }
+
+  .itemCard {
+    padding: 19.5px 26px 39px 26px;
+  }
+
+  .fillCardTitle,
+  .cardTitle {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .cardSubtitle {
+    font-size: 14px;
   }
 }
 </style>

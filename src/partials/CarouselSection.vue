@@ -95,9 +95,8 @@ export default {
 
 .slideContent {
   width: 100%;
-  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 32.5px;
 }
 
 .slideTitle {
@@ -116,15 +115,10 @@ export default {
 }
 
 @media all and (max-width: 360px) {
-  .slide {
-    padding: 0;
-  }
-
   .slideContent {
-    max-width: 100%;
-    margin: 0;
     padding: 0 19.5px;
     text-align: left;
+    max-width: 360px;
   }
 
   .slideTitle {
@@ -137,7 +131,43 @@ export default {
     font-size: 16px;
     padding-left: 6.5px;
     padding-right: 6.5px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .slide {
+    padding: 0;
+  }
+
+  .slideContent {
+    margin: 0;
+  }
+
+  .slideText {
     max-width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .slideContent {
+    max-width: 768px;
+  }
+
+  .slideTitle {
+    font-size: 44px;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  .slideText {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
+
+@media all and (min-width: 1366px) {
+  .slideContent {
+    max-width: 1240px;
   }
 }
 </style>
@@ -152,6 +182,33 @@ export default {
   bottom: 300px;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 32.5px;
+}
+
+@media all and (max-width: 360px) {
+  .slick-dots {
+    max-width: 360px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .slick-dots {
+    bottom: 280px;
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .slick-dots {
+    margin: 0 32.5px;
+    padding: 0 26px;
+    max-width: 768px;
+  }
+}
+
+@media all and (min-width: 1366px) {
+  .slick-dots {
+    max-width: 1240px;
+  }
 }
 </style>

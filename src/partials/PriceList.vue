@@ -5,7 +5,7 @@
         <font-awesome-icon icon="fa-solid fa-briefcase" />
       </div>
       <h3 :class="[$style.priceListTitle]">02__Прайс лист</h3>
-      <VueSlickCarousel v-bind="services" style="height: 300px;">
+      <VueSlickCarousel v-bind="services" style="height: 100%;">
         <div
           :class="[$style.priceListItem]"
           v-for="(service, index) in serviceList"
@@ -111,8 +111,8 @@ export default {
           {
             "breakpoint": 768,
             "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1,
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
             },
           },
           {
@@ -162,7 +162,6 @@ export default {
 }
 
 .priceListFlowAround {
-  position: relative;
   padding: 0 13px;
 }
 
@@ -316,23 +315,11 @@ export default {
 @media all and (max-width: 360px) {
   .priceListContainer {
     margin-top: 58.5px;
-    padding-bottom: 58.5px;
+    padding: 0;
   }
 
   .priceListFlowAround {
     padding: 0 1.3px;
-  }
-
-  .filledIconReverse {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-top: 2px solid #6630ff;
-    border-right: 2px solid #6630ff;
-  }
-
-  .priceListTitle {
-    padding-top: 260px;
   }
 
   .priceListItem {
@@ -346,6 +333,31 @@ export default {
   .cardFetures {
     padding-left: 6.5px;
     padding-right: 6.5px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .priceListFlowAround {
+    position: relative;
+  }
+
+  .filledIconReverse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 2px solid #6630ff;
+    border-right: 2px solid #6630ff;
+  }
+
+  .priceListTitle {
+    padding-top: 260px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .priceListContainer {
+    margin-top: 130px;
+    padding-bottom: 65px;
   }
 }
 </style>

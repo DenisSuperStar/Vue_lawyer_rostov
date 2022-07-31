@@ -137,7 +137,7 @@ div > a:first-child::after {
   line-height: 1.2;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
   .headerMenu {
     display: none;
   }
