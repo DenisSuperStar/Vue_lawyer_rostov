@@ -417,4 +417,10 @@ export default {
     font-size: 14px;
   }
 }
+
+@media all and (min-width: 1366px) {
+  .sectionInfo {
+    position: relative;
+  }
+}
 </style>
