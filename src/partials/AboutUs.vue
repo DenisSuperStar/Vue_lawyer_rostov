@@ -371,6 +371,10 @@ export default {
 }
 
 @media all and (max-width: 768px) {
+  .sectionContent {
+    position: relative;
+  }
+
   .sectionInfo {
     max-width: 100%;
     margin: 0;
@@ -388,7 +392,6 @@ export default {
 
 @media all and (min-width: 768px) {
   .sectionContent {
-    position: relative;
     margin-bottom: 130px;
   }
 
