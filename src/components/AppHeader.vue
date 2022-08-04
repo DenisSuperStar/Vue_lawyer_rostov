@@ -1,37 +1,41 @@
 <template>
   <header :class="[$style.header]">
-    <nav :class="[$style.headerMenu]">
-      <a href="/" :class="[$style.menuItem]">
-        <div :class="[$style.widgetIcon]"></div>
-        <div :class="[$style.widgetText]">Юрист-на-Дону</div>
-      </a>
-      <div :class="[$style.primaryMenu]">
-        <a
-          v-for="link in links"
-          :href="link.ref"
-          :class="[$style.menuItem, $style.primaryItem]"
-          :key="link.id"
-          >{{ link.text }}</a
-        >
-      </div>
-      <a href="#" :class="[$style.menuItem]">
-        <div :class="[$style.widgetIcon]">
-          <span :class="[$style.iconContainer]">
-            <font-awesome-icon
-              :class="[$style.normalIcon]"
-              icon="fa-solid fa-phone"
-            />
-          </span>
+    <nav :class="[$style.headerNavbar]">
+      <div :class="[$style.navbarContainer]">
+        <div :class="[$style.navbarIconLeft]">
+          <span :class="[$style.navbarIcon]"></span>
         </div>
-        <div :class="[$style.widgetContent]">+7 (951) 839-59-39</div>
-      </a>
+        <ul :class="[$style.navbarMenu]">
+          <li
+            :class="[$style.menuItem]"
+            v-for="(link, index) in links"
+            :key="index"
+          >
+            <a href="#" :class="[$style.primaryLink]" v-if="link.id === 1">{{
+              link.text
+            }}</a>
+            <a href="#" :class="[$style.itemLink]" v-else>{{ link.text }}</a>
+          </li>
+        </ul>
+        <div :class="[$style.navbarIconRight]">
+          <div :class="[$style.navbarIconRight]">
+            <span :class="[$style.navbarIcon]"></span>
+          </div>
+        </div>
+      </div>
+      <app-drawer />
     </nav>
   </header>
 </template>
 
 <script>
+import AppDrawer from "./AppDrawer.vue";
+
 export default {
   name: "HeaderBar",
+  components: {
+    "app-drawer": AppDrawer,
+  },
   data: function () {
     return {
       links: [
@@ -54,7 +58,31 @@ export default {
   z-index: 100;
 }
 
-.headerMenu {
+.navbarContainer {
+  display: flex;
+}
+
+.navbarIconLeft {
+  width: 60px;
+  height: 60px;
+  background-color: #6630ff;
+}
+
+.itemLink {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 1024px) {
+  .navbarContainer {
+    display: none;
+  }
+}
+
+/*.headerMenu {
   display: flex;
   align-items: center;
 }
@@ -141,5 +169,5 @@ div > a:first-child::after {
   .headerMenu {
     display: none;
   }
-}
+}*/
 </style>

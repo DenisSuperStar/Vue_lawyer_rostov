@@ -147,6 +147,28 @@ export default {
   padding: 0 32.5px;
 }
 
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  background-color: #f8eefd;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+}
+
+.slick-dots li button::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+}
+
+.slick-dots .slick-active {
+  background-color: #6630ff;
+}
+
 @media all and (max-width: 360px) {
   .slick-dots {
     max-width: 360px;
