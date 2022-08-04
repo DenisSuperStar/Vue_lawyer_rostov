@@ -10,6 +10,8 @@ import {
   faClock,
   faEnvelope,
   faHouseChimney,
+  faScaleBalanced,
+  faChevronLeft
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
@@ -26,7 +28,9 @@ library.add(
   faFilePen,
   faHouseChimney,
   faClock,
-  faEnvelope
+  faEnvelope,
+  faScaleBalanced,
+  faChevronLeft
 );
 library.add(faTwitter, faVk, faInstagram, faLinkedinIn);
 
