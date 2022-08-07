@@ -1,0 +1,91 @@
+<template>
+  <div :class="[$style.messageControl]">
+    <input
+      type="text"
+      :class="[$style.messageField]"
+      v-model="message"
+      @keyup:enter="changeStatusMessage"
+      name="your_message"
+      :placeholder="placeholder"
+      autocomplete="off"
+    />
+    <span id="error" :class="[$style.invalidField]" v-if="!message.length">{{
+      text
+    }}</span>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AppMessage",
+  props: {
+    message: {
+      type: String,
+      required: true,
+    },
+    text: {
+      type: String,
+      required: true,
+    },
+    placeholder: {
+      type: String,
+      default: "Ваше сообщение*",
+    },
+  },
+  data: function () {
+    return {
+      isMessage: null,
+    };
+  },
+  methods: {
+    validMessage() {
+      this.isMessage = this.message ? 1 : 0;
+    },
+    changeStatusMessage() {
+      this.$parent.$emit("message", { isNotice: this.isMessage });
+    },
+  },
+};
+</script>
+
+<style module>
+.messageControl {
+  position: relative;
+}
+
+.messageField {
+  width: 100%;
+  background-color: rgba(248, 238, 253, 0.1);
+  padding: 13px;
+  border: none;
+  min-height: 85px;
+}
+
+.messageField::placeholder {
+  color: #fff;
+}
+
+.messageField:active,
+.messageField:hover,
+.messageField:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.invalidField {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 6.5px;
+  color: #f00;
+}
+
+@media all and (max-width: 360px) {
+  .invalidField {
+    position: static;
+  }
+}
+</style>
