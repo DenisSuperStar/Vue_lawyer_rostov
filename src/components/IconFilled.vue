@@ -13,7 +13,6 @@ export default {
   props: {
     isLess: {
       type: Boolean,
-      required: true,
       default: false,
     },
     kind: {
@@ -34,6 +33,7 @@ export default {
   background-color: #fff;
   color: #6630ff;
   font-size: 60px;
+  padding: 6.5px 13px;
 }
 
 @media all and (max-width: 768px) {
