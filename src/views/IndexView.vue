@@ -1,18 +1,18 @@
 <template>
   <div :class="[$style.app]">
-    <div :class="[$style.backgroundImgContainer]">
+    <section :class="[$style.backgroundImgContainer]">
       <app-header />
       <section :class="[$style.carouselWrapper]">
-        <app-carousel />
+        <app-carousel :isDots="true" />
       </section>
-    </div>
-    <div :class="[$style.aboutSection]">
+    </section>
+    <section :class="[$style.aboutSection]">
       <div :class="[$style.aboutWrapper]">
         <div :class="[$style.aboutContent]">
-          <div :class="[$style.iconWrapper]">
+          <div :class="[$style.iconHolder, $style.iconHolder_1]">
             <icon-filled kind="fa-solid fa-question" />
           </div>
-          <h3 :class="[$style.appAboutUsHeadline]">01__О нас</h3>
+          <section-title name="01__О нас" />
           <div :class="[$style.appAboutUsSubline]">
             Наша компания предоставляет консультации по полному спектру
             юридических услуг
@@ -20,11 +20,26 @@
         </div>
       </div>
       <app-touch-carousel :isShow="false" :slidesShow="3" :slidesScroll="3" />
-    </div>
+    </section>
     <app-touch-carousel :isShow="true" :slidesShow="6" :slidesScroll="6" />
-    <!-- !!! -->
-    <service-catalog />
-    <feedback />
+    <section :class="[$style.catalogSection]">
+      <div :class="[$style.catalogWrapper]">
+        <div :class="[$style.iconHolder, $style.iconHolder_2]">
+          <icon-filled kind="fa-solid fa-briefcase" />
+        </div>
+        <section-title name="02__Прайс лист" />
+        <app-info-carousel :slidesShow="3" :slidesScroll="3" />
+      </div>
+    </section>
+    <section :class="[$style.layout]">
+      <div :class="[$style.layoutWrap]">
+        <sharp-corner-image />
+      </div>
+      <div :class="[$style.layoutForm]">
+        <icon-filled kind="fa-solid fa-file-pen" />
+      </div>
+    </section>
+    <!-- <feedback /> -->
     <location-display />
     <app-footer />
   </div>
@@ -32,14 +47,15 @@
 
 <script>
 import AppHeader from "@/components/AppHeader.vue";
+import SectionTitle from "@/components/SectionTitle.vue";
+import IconFilled from "@/components/IconFilled.vue";
+import SharpCornerImage from "@/components/SharpCornerImage.vue";
 import AppCarousel from "@/components/AppCarousel.vue";
 import AppTouchCarousel from "@/components/AppTouchCarousel.vue";
-
-import Feedback from "@/partials/FeedbackSection.vue";
-import LocationDisplay from "@/partials/LocationDisplaySection.vue";
-import ServiceCatalog from "@/partials/ServiceCatalogSection.vue";
+import AppInfoCarousel from "@/components/AppInfoCarousel.vue";
 import AppFooter from "@/components/AppFooter.vue";
-import IconFilled from "@/components/IconFilled.vue";
+
+import LocationDisplay from "@/partials/LocationDisplaySection.vue";
 
 export default {
   name: "IndexContent",
@@ -47,18 +63,18 @@ export default {
     "app-header": AppHeader,
     "app-carousel": AppCarousel,
     "app-touch-carousel": AppTouchCarousel,
+    "app-info-carousel": AppInfoCarousel,
+    "section-title": SectionTitle,
     "icon-filled": IconFilled,
+    "sharp-corner-image": SharpCornerImage,
 
-    feedback: Feedback,
     "location-display": LocationDisplay,
-    "service-catalog": ServiceCatalog,
     "app-footer": AppFooter,
   },
 };
 </script>
 <style module>
 .app {
-  position: relative;
   height: 100%;
 }
 
@@ -82,14 +98,19 @@ export default {
 }
 
 .aboutContent {
+  position: relative;
   max-width: calc(50% - 9.75px);
   margin-left: auto;
 }
 
-.iconWrapper {
+.iconHolder {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+}
+
+.iconHolder_2 {
+  padding: 0 26px;
 }
 
 .appAboutUsHeadline {
@@ -107,6 +128,15 @@ export default {
   padding-bottom: 39px;
 }
 
+.catalogSection {
+  background-color: #6630ff;
+}
+
+.catalogWrapper {
+  position: relative;
+  padding: 0 13px;
+}
+
 @media all and (max-width: 360px) {
   .appHeaderConatiner {
     margin-bottom: 58.5px;
@@ -118,7 +148,6 @@ export default {
   }
 
   .aboutContent {
-    position: relative;
     padding: 0 19.5px;
   }
 
@@ -133,6 +162,15 @@ export default {
     padding-right: 6.5px;
     padding-bottom: 58.5px;
   }
+
+  .catalogSection {
+    margin-top: 58.5px;
+    padding: 0;
+  }
+
+  .catalogWrapper {
+    padding: 0 1.3px;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -145,11 +183,8 @@ export default {
     margin: 0;
   }
 
-  .iconWrapper {
-    position: absolute;
-    top: 0;
-    left: auto;
-    right: 0;
+  .iconHolder_2 {
+    padding: 0;
   }
 }
 
@@ -169,6 +204,11 @@ export default {
   .appAboutUsSubline {
     padding-bottom: 58.5px;
   }
+
+  .catalogSection {
+    margin-top: 130px;
+    padding-bottom: 65px;
+  }
 }
 
 @media all and (min-width: 1366px) {
@@ -180,8 +220,9 @@ export default {
     margin-bottom: 58.5px;
   }
 
-  .aboutContent {
-    position: relative;
+  .catalogSection {
+    margin-top: 58.5px;
+    padding: 0;
   }
 }
 </style>
