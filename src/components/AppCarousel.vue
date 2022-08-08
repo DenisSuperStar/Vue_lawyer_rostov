@@ -19,6 +19,16 @@ import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   name: "AppPresentationCarousel",
+  props: {
+    isDots: {
+      type: Boolean,
+      required: true
+    },
+    startSlide: {
+      type: Number,
+      default: 0
+    }
+  },
   components: {
     VueSlickCarousel,
   },
@@ -30,9 +40,9 @@ export default {
       }),
       settings: {
         arrows: false,
-        dots: true,
+        dots: this.isDots,
         infinite: true,
-        initialSlide: 0,
+        initialSlide: this.startSlide,
       },
     };
   },

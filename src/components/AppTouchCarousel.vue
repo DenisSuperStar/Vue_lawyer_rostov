@@ -49,7 +49,7 @@ import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
   name: "AppTouchCarousel",
   components: {
-    VueSlickCarousel
+    VueSlickCarousel,
   },
   props: {
     isShow: {
@@ -63,6 +63,10 @@ export default {
     slidesScroll: {
       type: Number,
       required: true,
+    },
+    startSlide: {
+      type: Number,
+      default: 0,
     },
   },
   data: function () {
@@ -80,7 +84,7 @@ export default {
         touchMove: true,
         slidesToShow: this.slidesShow,
         slidesToscroll: this.slidesScroll,
-        initialSlide: 0,
+        initialSlide: this.startSlide,
         infinite: true,
         responsive: [
           {
@@ -118,11 +122,11 @@ export default {
     };
   },
   created() {
-    axios.get('https://reqres.in/api/users?page=1&per_page=12').then(res => {
-        const { data } = res.data;
-        this.items = data;
+    axios.get("https://reqres.in/api/users?page=1&per_page=12").then((res) => {
+      const { data } = res.data;
+      this.items = data;
     });
-  }
+  },
 };
 </script>
 
@@ -174,9 +178,7 @@ export default {
   }
 
   .itemCard {
-    border-left: 2px solid #6630ff;
-    border-right: 2px solid #6630ff;
-    border-bottom: 2px solid #6630ff;
+    border: 2px solid #6630ff;
     padding: 19.5px 19.5px 32.5px;
   }
 

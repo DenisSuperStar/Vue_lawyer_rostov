@@ -72,6 +72,20 @@ import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   name: "AppInfoCarousel",
+  props: {
+    slidesShow: {
+      type: Number,
+      required: true
+    },
+    slidesScroll: {
+      type: Number,
+      required: true
+    },
+    startSlide: {
+      type: Number,
+      default: 0
+    }
+  },
   components: {
     VueSlickCarousel,
   },
@@ -87,10 +101,10 @@ export default {
         arrows: false,
         dots: false,
         touchMove: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: this.slidesShow,
+        slidesToScroll: this.slidesScroll,
         infinite: true,
-        initialSlide: 0,
+        initialSlide: this.startSlide,
         responsive: [
           {
             breakpoint: 360,
