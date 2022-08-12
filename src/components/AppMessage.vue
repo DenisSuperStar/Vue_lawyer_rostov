@@ -3,14 +3,14 @@
     <input
       type="text"
       :class="[$style.messageField]"
-      v-model="message"
+      v-model="info"
       @keyup:enter="changeStatusMessage"
       name="your_message"
-      :placeholder="placeholder"
+      :placeholder="mask"
       autocomplete="off"
     />
-    <span id="error" :class="[$style.invalidField]" v-if="!message.length">{{
-      text
+    <span id="error" :class="[$style.invalidField]" v-if="!info.length">{{
+      words
     }}</span>
   </div>
 </template>
@@ -34,6 +34,9 @@ export default {
   },
   data: function () {
     return {
+      info: this.message,
+      words: this.text,
+      mask: this.placeholder,
       isMessage: null,
     };
   },

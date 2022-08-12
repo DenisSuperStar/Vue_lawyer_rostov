@@ -12,8 +12,8 @@
         :class="[$style.inputEmail]"
         @input="validEmail(errors)"
         @keyup:enter="changeStatusEmail"
-        v-model="email"
-        :placeholder="placeholder"
+        v-model="eMail"
+        :placeholder="mask"
         autocomplete="off"
       />
       <span id="error" :class="[$style.invalidField]">{{ errors[0] }}</span>
@@ -44,6 +44,8 @@ export default {
   },
   data: function () {
     return {
+      eMail: this.email,
+      mask: this.placeholder,
       isEmail: null,
     };
   },

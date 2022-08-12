@@ -32,20 +32,15 @@
 </template>
 
 <script>
-import { ValidationProvider, extend } from "vee-validate";
-import { regex } from "vee-validate/dist/rules";
 import AppInputText from "./AppInputText.vue";
 import AppInputEmail from "./AppInputEmail.vue";
 import AppInputPhone from "./AppInputPhone.vue";
 import AppMessage from "./AppMessage.vue";
 import SectionTitle from "./SectionTitle.vue";
 
-extend("regex", regex);
-
 export default {
   name: "AppSubmitForm",
   components: {
-    ValidationProvider,
     "section-title": SectionTitle,
     "app-input-text": AppInputText,
     "app-input-email": AppInputEmail,

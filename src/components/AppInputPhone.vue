@@ -12,9 +12,9 @@
         :class="[$style.inputPhone]"
         @input="validPhone(errors)"
         @keyup:enter="changeStatusPhone"
-        v-model="phone"
+        v-model="number"
         name="your_phone"
-        :placeholder="placeholder"
+        :placeholder="mask"
         autocomplete="off"
       />
       <span id="error" :class="[$style.invalidField]">{{ errors[0] }}</span>
@@ -45,6 +45,8 @@ export default {
   },
   data: function () {
     return {
+      number: this.phone,
+      mask: this.placeholder,
       isPhone: null,
     };
   },

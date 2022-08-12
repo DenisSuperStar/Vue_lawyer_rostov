@@ -5,12 +5,12 @@
       name="your_name"
       :class="[$style.inputText]"
       @keyup:enter="changeStatusName"
-      v-model="name"
-      :placeholder="placeholder"
+      v-model="forename"
+      :placeholder="mask"
       autocomplete="off"
     />
-    <span id="error" :class="[$style.invalidField]" v-if="!name.length">{{
-      text
+    <span id="error" :class="[$style.invalidField]" v-if="!forename.length">{{
+      message
     }}</span>
   </div>
 </template>
@@ -34,6 +34,9 @@ export default {
   },
   data: function () {
     return {
+      forename: this.name,
+      message: this.text,
+      mask: this.placeholder,
       isName: null,
     };
   },
