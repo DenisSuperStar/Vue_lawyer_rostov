@@ -7,28 +7,17 @@
         c 10.00 до 20.00, 5 дней в неделю
       </div>
     </div>
-    <div :class="[$style.mapContainer]">
-      <yandex-map :coords="coords" :zoom="zoom" :scroll-zoom="false">
-        <ymap-marker
-          :coords="coords"
-          marker-id="911078e7-7048-4f7b-b9fb-c918fbb2f790"
-          :icon="markerIcon"
-          :hint-content="hint"
-        >
-        </ymap-marker>
-      </yandex-map>
-    </div>
+    <app-yandex-map />
   </section>
 </template>
 
 <script>
-import { yandexMap, ymapMarker } from "vue-yandex-maps";
+import AppYandexMap from "@/views/index/partials/AppYandexMap.vue";
 
 export default {
   name: "ContactSection",
   components: {
-    yandexMap,
-    ymapMarker,
+    'app-yandex-map': AppYandexMap
   },
   data: function () {
     return {
