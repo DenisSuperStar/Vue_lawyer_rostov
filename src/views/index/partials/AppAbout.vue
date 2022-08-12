@@ -12,9 +12,9 @@
       </div>
     </div>
     <app-touch-carousel
-      :isShow="showImage"
-      :slidesShow="showSlides"
-      :slidesScroll="scrollSlides"
+      :isShow="false"
+      :slidesShow="3"
+      :slidesScroll="3"
     />
   </section>
 </template>
@@ -37,9 +37,6 @@ export default {
       title: "01__О нас",
       subtitle:
         "Наша компания предоставляет консультации по полному спектру юридических услуг",
-      showImage: false,
-      showSides: 3,
-      scrollSlides: 3,
     };
   },
 };
