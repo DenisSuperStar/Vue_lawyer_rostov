@@ -57,6 +57,22 @@ export default {
             },
           },
           {
+            breakpoint: 375,
+            settings: {
+              arrows: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 390,
+            settings: {
+              arrows: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
             breakpoint: 768,
             settings: {
               arrows: true,
@@ -64,6 +80,14 @@ export default {
               slidesToScroll: 2,
             },
           },
+          {
+            breakpoint: 820,
+            settings: {
+              arrows: true,
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          }
         ],
       },
     };

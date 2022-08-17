@@ -47,6 +47,7 @@ export default {
   background-color: #6630ff;
   text-align: right;
   padding: 1.3px 58.5px 39px 58.5px;
+  margin-bottom: 130px;
 }
 
 .aboutInner {
@@ -70,9 +71,10 @@ export default {
   line-height: 1.2;
   color: #fff;
   font-weight: 600;
+  margin-bottom: 58.5px;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 767px) {
   .about {
     padding: 0;
     margin-bottom: 58.5px;
@@ -85,26 +87,14 @@ export default {
   .subtitle {
     padding-left: 6.5px;
     padding-right: 6.5px;
-    
-  }
-}
-
-@media all and (max-width: 767px) {
-  .blockContent {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  .subtitle {
-    margin-bottom: 58.5px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .about {
-    padding-left: 0;
-    padding-right: 0;
-    margin-bottom: 58.5px;
+    margin-bottom: 39px;
+    padding-top: 0;
+    padding-bottom: 26px;
   }
 
   .subtitle {
@@ -114,9 +104,10 @@ export default {
   }
 }
 
-@media all and (min-width: 1024px) {
-  .about {
-    margin-bottom: 130px;
+@media all and (max-width: 1023px) {
+  .blockContent {
+    margin: 0;
+    max-width: 100%;
   }
 }
 </style>

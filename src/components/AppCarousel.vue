@@ -49,7 +49,19 @@ export default {
             arrows: true
           },
           {
+            breakpoint: 375,
+            arrows: true
+          },
+          {
+            breakpoint: 390,
+            arrows: true
+          },
+          {
             breakpoint: 768,
+            arrows: true
+          },
+          {
+            breakpoint: 820,
             arrows: true
           }
         ]

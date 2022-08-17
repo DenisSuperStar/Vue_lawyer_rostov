@@ -24,7 +24,13 @@ export default {
   background-color: #6630ff;
 }
 
-@media all and (max-width: 768px) {
+/*@media all and (max-width: 768px) {
+  .feedback {
+    display: block;
+    margin: 0;
+  }
+}*/
+@media all and (max-width: 1023px) {
   .feedback {
     display: block;
     margin: 0;

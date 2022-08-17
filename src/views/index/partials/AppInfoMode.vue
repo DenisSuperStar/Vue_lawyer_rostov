@@ -54,10 +54,15 @@ export default {
   color: #111;
   font-weight: 600;
 }
-
-@media all and (min-width: 768px) and (max-width: 1023px) {
+@media all and (max-width: 1023px) {
   .mode {
     margin: 0;
+  }
+
+  .modeColumn {
+    width: 100%;
+    padding-left: 26px;
+    padding-right: 26px;
   }
 }
 

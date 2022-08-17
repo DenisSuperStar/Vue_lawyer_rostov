@@ -96,12 +96,36 @@ export default {
             },
           },
           {
+            breakpoint: 375,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: true
+            }
+          },
+          {
+            breakpoint: 390,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: true
+            }
+          },
+          {
             breakpoint: 768,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
               arrows: true,
             },
+          },
+          {
+            breakpoint: 820,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              arrows: true
+            }
           },
           {
             breakpoint: 1024,
@@ -216,7 +240,7 @@ export default {
 <style>
   @import "../common/styles/slick.css";
 
-  @media all and (min-width: 768px) and (max-width: 1023px) {
+  @media all and (max-width: 1023px) {
     .slick-slider {
       height: auto;
     }

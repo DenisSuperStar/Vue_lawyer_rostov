@@ -39,7 +39,7 @@ export default {
   padding-right: 6.5px;
 }
 
-@media all and (min-width: 768px) and (max-width: 1023px) {
+@media all and (max-width: 1023px) {
   .yandexMap {
     padding: 0;
   }

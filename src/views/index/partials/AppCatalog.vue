@@ -35,6 +35,7 @@ export default {
 .catalog {
   margin-top: 130px;
   background-color: #6630ff;
+  padding-bottom: 65px;
 }
 
 .catalogInner {
@@ -49,20 +50,9 @@ export default {
   padding: 0 26px;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 767px) {
   .catalog {
-    padding: 0;
     margin-top: 58.5px;
-  }
-
-  .catalogInner {
-    padding: 0 1.3px;
-  }
-}
-
-@media all and (max-width: 1023px) {
-  .iconHolder {
-    padding: 0;
   }
 }
 
@@ -76,9 +66,13 @@ export default {
   }
 }
 
-@media all and (min-width: 1024px) {
+@media all and (max-width: 1023px) {
   .catalog {
-    padding-bottom: 65px;
+    padding: 0;
+  }
+
+  .iconHolder {
+    padding: 0;
   }
 }
 </style>

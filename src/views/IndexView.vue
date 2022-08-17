@@ -2,7 +2,7 @@
   <div :class="[$style.app]">
     <app-head />
     <app-about />
-    <app-touch-carousel :isShow="true" :slidesShow="4" :slidesScroll="4" />
+    <app-category-carousel :isShow="true" :slidesShow="4" :slidesScroll="4" />
     <app-catalog />
     <app-feedback />
     <app-info-mode />
@@ -16,7 +16,7 @@ import AppAbout from "./index/partials/AppAbout.vue";
 import AppCatalog from "./index/partials/AppCatalog.vue";
 import AppFeedback from "./index/partials/AppFeedback.vue";
 import AppInfoMode from "./index/partials/AppInfoMode.vue";
-import AppTouchCarousel from "@/components/AppTouchCarousel.vue";
+import AppCategoryCarousel from "@/components/AppCategoryCarousel.vue";
 import AppFooter from "@/components/AppFooter.vue";
 
 export default {
@@ -27,7 +27,7 @@ export default {
     "app-catalog": AppCatalog,
     "app-feedback": AppFeedback,
     "app-info-mode": AppInfoMode,
-    "app-touch-carousel": AppTouchCarousel,
+    "app-category-carousel": AppCategoryCarousel,
     "app-footer": AppFooter,
   },
 };

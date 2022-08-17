@@ -115,12 +115,36 @@ export default {
             },
           },
           {
+            breakpoint: 375,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: true
+            }
+          },
+          {
+            breakpoint: 390,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: true
+            }
+          },
+          {
             breakpoint: 768,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
               arrows: true,
             },
+          },
+          {
+            breakpoint: 820,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              arrows: true
+            }
           },
           {
             breakpoint: 1024,
@@ -278,7 +302,7 @@ export default {
   text-transform: uppercase;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .catalogSlide {
     padding: 0;
   }

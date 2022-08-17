@@ -124,7 +124,15 @@ export default {
   cursor: auto;
 }
 
-@media all and (max-width: 768px) {
+
+@media all and (max-width: 390px) {
+  .submitForm {
+    width: 100%;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-bottom: 58.5px;
+  }
+
   .formGrid {
     display: block;
   }
