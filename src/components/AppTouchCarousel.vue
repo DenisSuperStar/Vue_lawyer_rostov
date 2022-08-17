@@ -153,6 +153,7 @@ export default {
   margin-bottom: 6.5px;
   text-transform: uppercase;
   color: #111;
+  font-weight: 600;
 }
 
 .cardSubtitle {
@@ -172,7 +173,7 @@ export default {
   margin-bottom: 39px;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 767px) {
   .carouselSlide {
     padding: 0;
   }
@@ -210,4 +211,8 @@ export default {
     font-size: 14px;
   }
 }
+</style>
+
+<style>
+  @import "../common/styles/slick.css";
 </style>

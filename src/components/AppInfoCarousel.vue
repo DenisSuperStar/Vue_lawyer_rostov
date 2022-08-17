@@ -9,14 +9,14 @@
         <div :class="[$style.cardHeader]">
           <div :class="[$style.sideLeft]">
             <div :class="[$style.cardTitle]">
-                {{item.title}}
+              {{ item.title }}
             </div>
             <div :class="[$style.cardSubtitle]">
-                {{item.subtitle}}
+              {{ item.subtitle }}
             </div>
           </div>
           <div :class="[$style.sideRight]">
-            <div :class="[$style.cardTooltip]">{{item.price}}</div>
+            <div :class="[$style.cardTooltip]">{{ item.price }}</div>
           </div>
         </div>
         <ul :class="[$style.cardFetures]">
@@ -75,16 +75,16 @@ export default {
   props: {
     slidesShow: {
       type: Number,
-      required: true
+      required: true,
     },
     slidesScroll: {
       type: Number,
-      required: true
+      required: true,
     },
     startSlide: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   components: {
     VueSlickCarousel,
@@ -203,6 +203,7 @@ export default {
   line-height: 1.1;
   padding: 6.5px 13px;
   text-align: center;
+  font-weight: 600;
 }
 
 .cardFeatures {
@@ -273,9 +274,11 @@ export default {
   line-height: 1.1;
   text-align: center;
   padding: 13px 26px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
   .catalogSlide {
     padding: 0;
   }
@@ -292,7 +295,11 @@ export default {
 </style>
 
 <style>
-.slick-slider {
-  height: auto;
+@import "../common/styles/slick.css";
+
+@media all and (min-width: 1024px) {
+  .slick-slider {
+    height: auto;
+  }
 }
 </style>
