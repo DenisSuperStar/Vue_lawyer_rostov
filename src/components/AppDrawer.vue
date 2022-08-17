@@ -97,7 +97,7 @@ export default {
   cursor: pointer;
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 1024px) {
   .drawer {
     display: none;
   }
