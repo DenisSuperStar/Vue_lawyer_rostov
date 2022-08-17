@@ -27,7 +27,7 @@ export default {
   padding: 19.5px;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
   .photo {
     margin-bottom: 19.5px;
   }
