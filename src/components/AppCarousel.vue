@@ -87,13 +87,20 @@ export default {
   line-height: 1.1;
   margin-bottom: 13px;
   z-index: 10;
+  max-width: 870px;
+  white-space: break-spaces;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .slideText {
   color: #fff;
   font-size: 24px;
   line-height: 1.1;
-  max-width: 50%;
+  max-width: 870px;
+  white-space: break-spaces;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media all and (max-width: 360px) {
@@ -116,7 +123,7 @@ export default {
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .slide {
     padding: 0;
   }
@@ -155,64 +162,5 @@ export default {
 </style>
 
 <style>
-.slick-slider {
-  height: 900px;
-}
-
-.slick-dots {
-  position: relative;
-  bottom: 300px;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 32.5px;
-}
-
-.slick-dots li {
-  width: 10px;
-  height: 10px;
-  background-color: #f8eefd;
-  cursor: pointer;
-}
-
-.slick-dots li button {
-  width: 10px;
-  height: 10px;
-}
-
-.slick-dots li button::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-}
-
-.slick-dots .slick-active {
-  background-color: #6630ff;
-}
-
-@media all and (max-width: 360px) {
-  .slick-dots {
-    max-width: 360px;
-  }
-}
-
-@media all and (max-width: 768px) {
-  .slick-dots {
-    bottom: 280px;
-    text-align: left;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .slick-dots {
-    margin: 0 32.5px;
-    padding: 0 26px;
-    max-width: 768px;
-  }
-}
-
-@media all and (min-width: 1366px) {
-  .slick-dots {
-    min-width: 1240px;
-  }
-}
+@import "../common/styles/slick.css";
 </style>
