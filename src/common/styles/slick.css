@@ -5,7 +5,6 @@
 .slick-dots {
   position: relative;
   bottom: 300px;
-  max-width: 1240px;
   margin: 0 auto;
   padding: 0 32.5px;
 }
@@ -42,19 +41,14 @@
   .slick-dots {
     bottom: 280px;
     text-align: left;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .slick-dots {
-    margin: 0 32.5px;
-    padding: 0 26px;
     max-width: 768px;
   }
 }
 
-@media all and (min-width: 1366px) {
+@media all and (min-width: 1024px) {
   .slick-dots {
-    min-width: 1240px;
+    margin: 0;
+    padding: 0;
+    max-width: 960px;
   }
 }
