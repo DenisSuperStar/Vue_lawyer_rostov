@@ -144,7 +144,7 @@ export default {
   padding: 13px 26px;
 }
 
-@media all and (min-width: 1366px) {
+@media all and (min-width: 1024px) {
   .cardBody {
     display: flex;
   }
@@ -157,4 +157,8 @@ export default {
     flex: 3;
   }
 }
+</style>
+
+<style>
+  @import "../common/styles/slick.css";
 </style>
