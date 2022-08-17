@@ -22,7 +22,6 @@ export default {
 .feedback {
   display: flex;
   background-color: #6630ff;
-  margin-bottom: 130px;
 }
 
 @media all and (max-width: 768px) {

@@ -59,16 +59,16 @@ export default {
   }
 }
 
-@media all and (max-width: 768px) {
-  .iconHolder {
-    padding: 0;
-  }
-}
-
-@media all and (min-width: 768px) {
+@media all and (min-width: 767px) {
   .catalog {
     margin-top: 130px;
     padding-bottom: 65px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .iconHolder {
+    padding: 0;
   }
 }
 </style>

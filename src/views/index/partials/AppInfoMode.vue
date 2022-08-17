@@ -41,19 +41,21 @@ export default {
 }
 
 .subtitle {
-  font-size: 32.5px;
+  font-size: 35px;
   line-height: 1.2;
   color: #111;
+  font-weight: 600;
   padding-bottom: 6.5px;
 }
 
 .modeInfo {
-  font-size: 32.5px;
+  font-size: 35px;
   line-height: 1.2;
   color: #111;
+  font-weight: 600;
 }
 
-@media all and (min-width: 1366px) {
+@media all and (min-width: 1024px) {
   .mode {
     display: flex;
     grid-gap: 45.5px;

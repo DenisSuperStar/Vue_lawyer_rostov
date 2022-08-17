@@ -69,7 +69,7 @@ export default {
   font-size: 35px;
   line-height: 1.2;
   color: #fff;
-  margin-bottom: 39px;
+  font-weight: 600;
 }
 
 @media all and (max-width: 360px) {
@@ -85,14 +85,18 @@ export default {
   .subtitle {
     padding-left: 6.5px;
     padding-right: 6.5px;
-    margin-bottom: 58.5px;
+    
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .blockContent {
     margin: 0;
     max-width: 100%;
+  }
+
+  .subtitle {
+    margin-bottom: 58.5px;
   }
 }
 
@@ -102,11 +106,11 @@ export default {
   }
 
   .subtitle {
-    margin-bottom: 58.5px;
+    margin-bottom: 39px;
   }
 }
 
-@media all and (min-width: 1366px) {
+@media all and (min-width: 1024px) {
   .about {
     margin-bottom: 58.5px;
   }
