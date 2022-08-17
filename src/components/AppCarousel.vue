@@ -43,6 +43,16 @@ export default {
         dots: this.isDots,
         infinite: true,
         initialSlide: this.startSlide,
+        responsive: [
+          {
+            breakpoint: 360,
+            arrows: true
+          },
+          {
+            breakpoint: 768,
+            arrows: true
+          }
+        ]
       },
     };
   },

@@ -1,18 +1,18 @@
 <template>
   <section :class="[$style.feedback]">
-    <app-photo-founder />
+    <app-photo />
     <app-feedback-form />
   </section>
 </template>
 
 <script>
-import AppPhotoFounder from "./AppPhotoFounder.vue";
+import AppPhoto from "./AppPhoto.vue";
 import AppFeedbackForm from "./AppFeedbackForm.vue";
 
 export default {
   name: "AppFeedback",
   components: {
-    "app-photo-founder": AppPhotoFounder,
+    "app-photo": AppPhoto,
     "app-feedback-form": AppFeedbackForm,
   },
 };

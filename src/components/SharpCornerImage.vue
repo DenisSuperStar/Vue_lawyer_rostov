@@ -1,20 +1,19 @@
 <template>
   <div :class="[$style.imageWrapper]">
     <div :class="[$style.borderlessWrapper]">
-      <img :src="founder" :class="[$style.photo]" alt="Основатель проекта" />
+      <img :src="sharpPhoto" :class="[$style.photo]" alt="Основатель проекта" />
     </div>
   </div>
 </template>
 
 <script>
-import founderPhoto from "../../public/assets/leader.svg";
-
 export default {
   name: "SharpCornerImage",
-  data: function () {
-    return {
-      founder: founderPhoto,
-    };
+  props: {
+    sharpPhoto: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>

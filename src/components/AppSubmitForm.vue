@@ -82,7 +82,6 @@ export default {
 <style module>
 .submitForm {
   width: 100%;
-  height: 100%;
   padding-left: 60px;
   padding-right: 60px;
 }
