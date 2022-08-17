@@ -55,6 +55,12 @@ export default {
   font-weight: 600;
 }
 
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .mode {
+    margin: 0;
+  }
+}
+
 @media all and (min-width: 1024px) {
   .mode {
     display: flex;

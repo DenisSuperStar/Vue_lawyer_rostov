@@ -22,9 +22,15 @@ export default {
   padding: 260px 13px 26px;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .sectionTitle {
     padding-top: 204px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .sectionTitle {
+    padding-top: 139px;
   }
 }
 </style>

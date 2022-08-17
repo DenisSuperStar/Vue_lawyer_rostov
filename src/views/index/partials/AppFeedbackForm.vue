@@ -29,9 +29,16 @@ export default {
   width: 60%;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .feedbackForm {
     padding: 260px 0 130px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .feedbackForm {
+    width: 100%;
+    padding: 0 26px 58.5px;
   }
 }
 </style>

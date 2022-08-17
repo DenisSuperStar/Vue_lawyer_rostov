@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <app-touch-carousel
+    <app-category-carousel
       :isShow="false"
       :slidesShow="3"
       :slidesScroll="3"
@@ -22,14 +22,14 @@
 <script>
 import IconFilled from "@/components/IconFilled.vue";
 import SectionTitle from "@/components/SectionTitle.vue";
-import AppTouchCarousel from "@/components/AppTouchCarousel.vue";
+import AppCategoryCarousel from "@/components/AppCategoryCarousel.vue";
 
 export default {
   name: "AppAbout",
   components: {
     "icon-filled": IconFilled,
     "section-title": SectionTitle,
-    "app-touch-carousel": AppTouchCarousel,
+    "app-category-carousel": AppCategoryCarousel,
   },
   data: function () {
     return {
@@ -100,19 +100,23 @@ export default {
   }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1023px) {
   .about {
-    margin-bottom: 130px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 58.5px;
   }
 
   .subtitle {
+    padding-left: 26px;
+    padding-right: 26px;
     margin-bottom: 39px;
   }
 }
 
 @media all and (min-width: 1024px) {
   .about {
-    margin-bottom: 58.5px;
+    margin-bottom: 130px;
   }
 }
 </style>

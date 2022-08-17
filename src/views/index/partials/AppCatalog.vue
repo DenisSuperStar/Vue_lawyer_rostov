@@ -33,6 +33,7 @@ export default {
 
 <style module>
 .catalog {
+  margin-top: 130px;
   background-color: #6630ff;
 }
 
@@ -59,16 +60,25 @@ export default {
   }
 }
 
-@media all and (min-width: 767px) {
-  .catalog {
-    margin-top: 130px;
-    padding-bottom: 65px;
+@media all and (max-width: 1023px) {
+  .iconHolder {
+    padding: 0;
   }
 }
 
-@media all and (max-width: 768px) {
-  .iconHolder {
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .catalog {
+    margin-top: 58.5px;
+  }
+
+  .catalogInner {
     padding: 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .catalog {
+    padding-bottom: 65px;
   }
 }
 </style>
