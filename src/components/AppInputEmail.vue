@@ -11,6 +11,7 @@
         name="your_email"
         :class="[$style.inputEmail]"
         @input="validEmail(errors)"
+        @change="changeStatusEmail"
         @keyup:enter="changeStatusEmail"
         v-model="eMail"
         :placeholder="mask"
@@ -68,7 +69,7 @@ export default {
 .inputEmail {
   width: 100%;
   background-color: rgba(248, 238, 253, 0.1);
-  padding: 13px;
+  padding: 26px 13px;
   border: none;
 }
 
@@ -94,7 +95,7 @@ export default {
   color: #f00;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
   .invalidField {
     position: static;
   }

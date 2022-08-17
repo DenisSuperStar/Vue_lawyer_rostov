@@ -4,6 +4,7 @@
       type="text"
       name="your_name"
       :class="[$style.inputText]"
+      @change="changeStatusName"
       @keyup:enter="changeStatusName"
       v-model="forename"
       :placeholder="mask"
@@ -17,7 +18,7 @@
 
 <script>
 export default {
-  name: "InputTextControl",
+  name: "AppInputText",
   props: {
     name: {
       type: String,
@@ -59,7 +60,7 @@ export default {
 .inputText {
   width: 100%;
   background-color: rgba(248, 238, 253, 0.1);
-  padding: 13px;
+  padding: 26px 13px;
   border: none;
 }
 
@@ -85,7 +86,7 @@ export default {
   color: #f00;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
   .inputTextControl {
     padding-bottom: 6.5px;
   }

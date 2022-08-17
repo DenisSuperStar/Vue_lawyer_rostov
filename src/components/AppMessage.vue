@@ -4,6 +4,7 @@
       type="text"
       :class="[$style.messageField]"
       v-model="info"
+      @change="changeStatusMessage"
       @keyup:enter="changeStatusMessage"
       name="your_message"
       :placeholder="mask"
@@ -59,9 +60,10 @@ export default {
 .messageField {
   width: 100%;
   background-color: rgba(248, 238, 253, 0.1);
-  padding: 13px;
+  padding-left: 13px;
+  padding-right: 13px;
   border: none;
-  min-height: 85px;
+  min-height: 91px;
 }
 
 .messageField::placeholder {
@@ -86,7 +88,7 @@ export default {
   color: #f00;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
   .invalidField {
     position: static;
   }

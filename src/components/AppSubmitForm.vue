@@ -110,10 +110,12 @@ export default {
   background-color: #6630ff;
   border: 2px solid #fff;
   color: #fff;
-  padding: 13px 26px;
+  padding: 26px 32.5px;
   font-size: 16px;
   line-height: 1.1;
   cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .submitDisable {
@@ -122,7 +124,7 @@ export default {
   cursor: auto;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
   .formGrid {
     display: block;
   }
