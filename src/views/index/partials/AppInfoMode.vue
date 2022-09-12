@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import SectionTitle from "@/components/SectionTitle.vue";
-import AppYandexMap from "./AppYandexMap.vue";
+import PrimaryTitle from '@/components/index/PrimaryTitle.vue';
+import AppYandexMap from './AppYandexMap.vue';
 
 export default {
   name: "AppInfo",
   components: {
-    "section-title": SectionTitle,
+    "section-title": PrimaryTitle,
     "app-yandex-map": AppYandexMap,
   },
   data: function () {

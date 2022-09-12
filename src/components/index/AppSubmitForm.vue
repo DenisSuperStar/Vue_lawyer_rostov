@@ -36,12 +36,12 @@ import AppInputText from "./AppInputText.vue";
 import AppInputEmail from "./AppInputEmail.vue";
 import AppInputPhone from "./AppInputPhone.vue";
 import AppMessage from "./AppMessage.vue";
-import SectionTitle from "./SectionTitle.vue";
+import PrimaryTitle from "./PrimaryTitle.vue";
 
 export default {
   name: "AppSubmitForm",
   components: {
-    "section-title": SectionTitle,
+    "section-title": PrimaryTitle,
     "app-input-text": AppInputText,
     "app-input-email": AppInputEmail,
     "app-input-phone": AppInputPhone,

@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import AppHeader from "@/components/AppHeader.vue";
-import AppCarousel from "@/components/AppCarousel.vue";
+import AppHeader from '@/components/index/AppHeader.vue';
+import AppCarousel from '@/components/index/AppCarousel.vue';
 
 export default {
   name: "AppHead",

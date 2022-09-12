@@ -184,5 +184,5 @@ export default {
 </style>
 
 <style>
-  @import "../common/styles/slick.css";
+  @import "../../common/styles/slick.css";
 </style>

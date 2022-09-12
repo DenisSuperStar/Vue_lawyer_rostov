@@ -238,7 +238,7 @@ export default {
 </style>
 
 <style>
-  @import "../common/styles/slick.css";
+@import "../../common/styles/slick.css";
 
   @media all and (max-width: 1023px) {
     .slick-slider {

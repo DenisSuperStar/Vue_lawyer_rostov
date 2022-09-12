@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import AppMap from "@/components/AppMap.vue";
+import AppMap from '@/components/index/AppMap.vue';
 
 export default {
   name: "AppYandexMap",

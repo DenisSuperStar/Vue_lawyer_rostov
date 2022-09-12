@@ -8,7 +8,7 @@
 <script>
 
 
-import AppOverviewCarousel from "@/components/AppOverviewCarousel.vue";
+import AppOverviewCarousel from '@/components/index/AppOverviewCarousel.vue';
 
 export default {
   name: "AppFooterOverviewCatalog",

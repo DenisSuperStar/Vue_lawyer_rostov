@@ -16,6 +16,8 @@ export default {
 </script>
 
 <style>
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 * {
   margin: 0;
   padding: 0;

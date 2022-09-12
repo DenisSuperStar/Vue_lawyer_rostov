@@ -6,7 +6,7 @@
 
 <script>
 import photo from "../../../../public/assets/leader.svg";
-import SharpCornerImage from "@/components/SharpCornerImage.vue";
+import SharpCornerImage from "@/components/index/SharpCornerImage.vue";
 
 export default {
   name: "AppPhoto",

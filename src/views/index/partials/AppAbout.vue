@@ -20,15 +20,15 @@
 </template>
 
 <script>
-import IconFilled from "@/components/IconFilled.vue";
-import SectionTitle from "@/components/SectionTitle.vue";
-import AppCategoryCarousel from "@/components/AppCategoryCarousel.vue";
+import IconFilled from '@/components/index/IconFilled.vue';
+import PrimaryTitle from '@/components/index/PrimaryTitle.vue';
+import AppCategoryCarousel from '@/components/index/AppCategoryCarousel.vue';
 
 export default {
   name: "AppAbout",
   components: {
     "icon-filled": IconFilled,
-    "section-title": SectionTitle,
+    "section-title": PrimaryTitle,
     "app-category-carousel": AppCategoryCarousel,
   },
   data: function () {

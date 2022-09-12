@@ -1,10 +1,10 @@
 <template>
-  <h3 :class="[$style.sectionTitle]">{{name}}</h3>
+  <h3 :class="[$style.primaryTitle]">{{name}}</h3>
 </template>
 
 <script>
 export default {
-  name: "SectionTitle",
+  name: "PrimaryTitle",
   props: {
     name: {
       type: String,
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style module>
-.sectionTitle {
+.primaryTitle {
   line-height: 1.1;
   text-transform: uppercase;
   color: #fff;
@@ -23,7 +23,7 @@ export default {
 }
 
 @media all and (max-width: 1023px) {
-  .sectionTitle {
+  .primaryTitle {
     padding-top: 159.5px;
   }
 }

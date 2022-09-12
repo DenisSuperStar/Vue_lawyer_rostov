@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import AppPhoto from "./AppPhoto.vue";
-import AppFeedbackForm from "./AppFeedbackForm.vue";
+import AppPhoto from './AppPhoto.vue';
+import AppFeedbackForm from './AppFeedbackForm.vue';
 
 export default {
   name: "AppFeedback",

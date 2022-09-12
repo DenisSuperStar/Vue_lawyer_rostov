@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import SectionTitle from "@/components/SectionTitle.vue";
-import IconFilled from "@/components/IconFilled.vue";
-import AppInfoCarousel from "@/components/AppInfoCarousel.vue";
+import PrimaryTitle from '@/components/index/PrimaryTitle.vue';
+import IconFilled from '@/components/index/IconFilled.vue';
+import AppInfoCarousel from '@/components/index/AppInfoCarousel.vue';
 
 export default {
   name: "AppCatalog",
   components: {
-    "section-title": SectionTitle,
+    "section-title": PrimaryTitle,
     "icon-filled": IconFilled,
     "app-info-carousel": AppInfoCarousel,
   },

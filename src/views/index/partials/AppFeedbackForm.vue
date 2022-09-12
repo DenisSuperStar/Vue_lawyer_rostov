@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import IconFilled from "@/components/IconFilled.vue";
-import AppSubmitForm from "@/components/AppSubmitForm.vue";
+import IconFilled from '@/components/index/IconFilled.vue';
+import AppSubmitForm from '@/components/index/AppSubmitForm.vue';
 
 export default {
   name: "AppFeedbackForm",
